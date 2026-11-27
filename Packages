@@ -188,6 +188,22 @@ SHA256: 7399a07a516475ebb002fb36a2485279e784bd68ce690b361cdfe91e34701ca9
 SileoDepiction: https://w1nddust.github.io/Repo/depictions/org.coolstar.libhooker.json
 Description: libhooker engine, tweak loader and safe mode for iOS 16+ roothide
 
+Package: rootless-compat
+Name: rootless-compat
+Version: 2.0.1
+Architecture: iphoneos-arm64
+Section: System
+Maintainer: roothide
+Author: roothide
+Depends: com.roothide.patchloader(>= 0.0.4)
+Filename: ./debs/rootless-compat_2.0.1_iphoneos-arm64.deb
+Size: 42122
+Installed-Size: 300
+MD5sum: 0df00dc80e60902f47f002324b988963
+SHA1: 1d0518a288d713d48ffd36274d5b356376485028
+SHA256: 90bb42c7598352b87d841956a4abf31ae2c53a4fd9fa3fb759d02b493afaff60
+Description: Compat Layer for Rootless Tweaks
+
 Package: ai.akemi.appsyncunified
 Name: AppSync Unified
 Version: 116.0

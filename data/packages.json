@@ -11,11 +11,11 @@
     ]
   },
   "stats": {
-    "total": 14,
+    "total": 15,
     "by_section": {
       "RootLess": 1,
       "RootHide": 7,
-      "System": 2,
+      "System": 3,
       "TrollStore": 4
     }
   },
@@ -348,6 +348,28 @@
       "sha256": "7399a07a516475ebb002fb36a2485279e784bd68ce690b361cdfe91e34701ca9",
       "homepage": "",
       "changelog": "depictions/changelogs/org.coolstar.libhooker.md"
+    },
+    {
+      "package": "rootless-compat",
+      "slug": "rootless-compat",
+      "name": "rootless-compat",
+      "version": "2.0.1",
+      "architecture": "iphoneos-arm64",
+      "section": "System",
+      "env": "System",
+      "summary": "Compat Layer for Rootless Tweaks",
+      "description": "",
+      "maintainer": "roothide",
+      "author": "roothide",
+      "depends": [
+        "com.roothide.patchloader(>= 0.0.4)"
+      ],
+      "filename": "debs/rootless-compat_2.0.1_iphoneos-arm64.deb",
+      "size": 42122,
+      "size_label": "41 KB",
+      "sha256": "90bb42c7598352b87d841956a4abf31ae2c53a4fd9fa3fb759d02b493afaff60",
+      "homepage": "",
+      "changelog": "depictions/changelogs/rootless-compat.md"
     }
   ]
 }

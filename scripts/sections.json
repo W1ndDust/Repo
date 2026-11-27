@@ -6,5 +6,6 @@
   "cn.zqbb.jailfools": "TrollStore",
   "com.iosdump.tslite": "TrollStore",
   "ai.akemi.appsyncunified": "TrollStore",
-  "jp.soh.reprovisions": "TrollStore"
+  "jp.soh.reprovisions": "TrollStore",
+  "rootless-compat": "System"
 }
