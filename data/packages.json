@@ -11,10 +11,10 @@
     ]
   },
   "stats": {
-    "total": 15,
+    "total": 16,
     "by_section": {
       "RootLess": 1,
-      "RootHide": 7,
+      "RootHide": 8,
       "System": 3,
       "TrollStore": 4
     }
@@ -72,7 +72,7 @@
       "slug": "ai.akemi.appsyncunified",
       "name": "AppSync Unified",
       "version": "116.0",
-      "architecture": "iphoneos-arm64e",
+      "architecture": "iphoneos-arm64",
       "section": "TrollStore",
       "env": "TrollStore",
       "summary": "Enables the ability to install unsigned/fakesigned iOS applications.",
@@ -84,10 +84,10 @@
         "mobilesubstrate (>= 0.9.5100)",
         "firmware (<= 18.2)"
       ],
-      "filename": "debs/ai.akemi.appsyncunified_116.0_iphoneos-arm64e.deb",
-      "size": 53712,
-      "size_label": "52 KB",
-      "sha256": "a6359a79568471da3ff101e0cb71b28b028e8a134e0074d01ef7c7ef46a33656",
+      "filename": "debs/ai.akemi.appsyncunified_116.0_iphoneos-arm64.deb",
+      "size": 51062,
+      "size_label": "50 KB",
+      "sha256": "34f1446bd9672fb1c52b38847ff5351d800df95c20225e8958f55534723ff113",
       "homepage": "https://cydia.akemi.ai/",
       "changelog": "depictions/changelogs/ai.akemi.appsyncunified.md"
     },
@@ -116,7 +116,7 @@
       "slug": "cn.zqbb.jailfools",
       "name": "JailFools",
       "version": "5.2.1",
-      "architecture": "iphoneos-arm64e",
+      "architecture": "iphoneos-arm64",
       "section": "TrollStore",
       "env": "TrollStore",
       "summary": "Give me 108 yuan.",
@@ -126,10 +126,10 @@
       "depends": [
         "firmware (>= 15.0)"
       ],
-      "filename": "debs/cn.zqbb.jailfools_5.2.1_iphoneos-arm64e.deb",
-      "size": 4600858,
+      "filename": "debs/cn.zqbb.jailfools_5.2.1_iphoneos-arm64.deb",
+      "size": 4600870,
       "size_label": "4.4 MB",
-      "sha256": "cb68b669ce9f8fd79f0faf327c8b7d5d609824df9506285dcd10da4c621dcc8a",
+      "sha256": "3a3a54cdcad0922bb38de6de0d401ee8a7c48aa530a21ab518d626683b4f3fc8",
       "homepage": "",
       "changelog": "depictions/changelogs/cn.zqbb.jailfools.md"
     },
@@ -164,7 +164,7 @@
       "slug": "jp.soh.reprovisions",
       "name": "ReSign 苹果 ID 续签",
       "version": "1.1.164",
-      "architecture": "iphoneos-arm64e",
+      "architecture": "iphoneos-arm64",
       "section": "TrollStore",
       "env": "TrollStore",
       "summary": "使用 苹果 ID 续签 IPA",
@@ -176,10 +176,10 @@
         "zip",
         "unzip"
       ],
-      "filename": "debs/jp.soh.reprovisions_1.1.164_iphoneos-arm64e.deb",
-      "size": 6259978,
+      "filename": "debs/jp.soh.reprovisions_1.1.164_iphoneos-arm64.deb",
+      "size": 6259074,
       "size_label": "6.0 MB",
-      "sha256": "4d8362e326ae69d7c1ca7f7069e7133182d6f0b12477e93cfb7fd6ad59427d28",
+      "sha256": "4bf45ffc92612eac5a9e1e16c40253a3f42995738e205be758f6afe65bf16ff0",
       "homepage": "",
       "changelog": "depictions/changelogs/jp.soh.reprovisions.md"
     },
@@ -209,11 +209,34 @@
       "changelog": "depictions/changelogs/com.nicksworks.roadrunnerreborn.md"
     },
     {
+      "package": "cn.llld.settingsudid",
+      "slug": "cn.llld.settingsudid",
+      "name": "SettingsUDID-roothide",
+      "version": "1.0",
+      "architecture": "iphoneos-arm64e",
+      "section": "RootHide",
+      "env": "RootHide",
+      "summary": "Check your UDID from the Settings > General > About phone page!从“设置”>\"通用\">“关于手机”页查看您的UDID！_________仅测试用,有问题卸载---roothide",
+      "description": "",
+      "maintainer": "来了老弟",
+      "author": "iCraze",
+      "depends": [
+        "firmware (>= 12.0)",
+        "mobilesubstrate (>= 0.9.5000)"
+      ],
+      "filename": "debs/cn.llld.settingsudid_1.0_iphoneos-arm64e.deb",
+      "size": 3648,
+      "size_label": "4 KB",
+      "sha256": "9ae03701e07b2190846e87d558dee294e31e061c04968204acb3b560dc570e33",
+      "homepage": "",
+      "changelog": "depictions/changelogs/cn.llld.settingsudid.md"
+    },
+    {
       "package": "com.iosdump.tslite",
       "slug": "com.iosdump.tslite",
       "name": "TSLite(RootHide)",
       "version": "2.1.1-2",
-      "architecture": "iphoneos-arm64e",
+      "architecture": "iphoneos-arm64",
       "section": "TrollStore",
       "env": "TrollStore",
       "summary": "越狱专用的APP安装器，iosdump修改版TrollStoreLite，功能多多(程序改名、换图标、解密、降级等)；同步最新代码v2.1.1-2：修复内置 ldid 生成的签名可执行段信息。",
@@ -223,10 +246,10 @@
       "depends": [
         "ldid"
       ],
-      "filename": "debs/com.iosdump.tslite_2.1.1-2_iphoneos-arm64e.deb",
-      "size": 3679176,
+      "filename": "debs/com.iosdump.tslite_2.1.1-2_iphoneos-arm64.deb",
+      "size": 3679164,
       "size_label": "3.5 MB",
-      "sha256": "23426e9bb86ee0ad8b6df796621844139e08785a9511b2a4675ba9561e352786",
+      "sha256": "ace8d89da2d864d92577a42509c382f6df2626d2a80378fd5ebc834462585ca4",
       "homepage": "",
       "changelog": "depictions/changelogs/com.iosdump.tslite.md"
     },
