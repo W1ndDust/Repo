@@ -5,9 +5,16 @@
   "suite": "stable",
   "codename": "ios",
   "version": "1.0",
-  "architectures": ["iphoneos-arm64", "iphoneos-arm"],
+  "architectures": [
+    "iphoneos-arm64",
+    "iphoneos-arm"
+  ],
   "base_url": "https://w1nddust.github.io/Repo/",
   "icon": "CydiaIcon.png",
-  "sections": ["RootLess", "RootHide"],
+  "sections": [
+    "RootLess",
+    "RootHide",
+    "System"
+  ],
   "default_section": "RootLess"
 }

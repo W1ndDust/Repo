@@ -63,6 +63,12 @@ def install_layout(deb: Path) -> str:
         if p.startswith("./"):
             p = p[2:]
         paths.append(p)
+    # 系统级包：守护进程 / 命令行工具，且不是 MobileSubstrate 插件
+    has_daemon = any("/LaunchDaemons/" in p or "/LaunchAgents/" in p for p in paths)
+    has_tool = any(p.startswith(("usr/bin/", "usr/sbin/", "usr/libexec/")) for p in paths)
+    is_tweak = any("MobileSubstrate/DynamicLibraries/" in p for p in paths)
+    if (has_daemon or has_tool) and not is_tweak:
+        return "system"
     if any(p.startswith("var/jb/") for p in paths):
         return "rootless"
     if any(p.startswith(("Library/", "usr/", "Applications/", "System/")) for p in paths):
@@ -80,6 +86,8 @@ def classify(deb: Path, c: dict) -> str:
 
     # 1) 安装路径最可信
     layout = install_layout(deb)
+    if layout == "system":
+        return "System" if "System" in SECTIONS else DEFAULT_SECTION
     if layout == "rootless":
         return "RootLess" if "RootLess" in SECTIONS else DEFAULT_SECTION
     if layout == "rootful":

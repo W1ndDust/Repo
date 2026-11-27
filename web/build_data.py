@@ -22,7 +22,7 @@ CONFIG = ROOT / "scripts" / "config.json"
 OUT = ROOT / "data" / "packages.json"
 
 # 环境 → 展示名（分类规则见 scripts/gen_index.py classify()：按包内安装路径判定）
-ENV_LABEL = {"RootLess": "Rootless", "RootHide": "RootHide"}
+ENV_LABEL = {"RootLess": "Rootless", "RootHide": "RootHide", "System": "System"}
 
 
 def parse_deb822(text: str) -> list[dict]:

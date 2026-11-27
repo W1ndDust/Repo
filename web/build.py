@@ -89,7 +89,7 @@ def shell(title: str, desc: str, body: str, root: str, page: str, data: dict, v:
 
 
 def row(p: dict, root: str, index=None) -> str:
-    tag_class = "rh" if p["section"] == "RootHide" else "rl"
+    tag_class = {"RootHide": "rh", "System": "sys"}.get(p["section"], "rl")
     num = f'<span class="row__num" aria-hidden="true">{index:02d}</span>' if index else ""
     return (
         f'<li class="row{" row--num" if index else ""}" data-section="{esc(p["section"])}" data-name="{esc(p["name"])}" '
@@ -117,27 +117,25 @@ def build_home(data: dict, featured: list[dict], root: str) -> str:
         for i, p in enumerate(data["packages"], 1)
     ) or '<li class="rail__empty">暂无插件</li>'
 
-    stats = "".join([
-        f'<div class="stat"><span class="stat__n">{data["stats"]["total"]}</span>'
-        f'<span class="stat__l">插件总数</span></div>',
-        f'<div class="stat"><span class="stat__n">{data["stats"]["by_section"].get("RootLess", 0)}</span>'
-        f'<span class="stat__l">Rootless</span></div>',
-        f'<div class="stat"><span class="stat__n">{data["stats"]["by_section"].get("RootHide", 0)}</span>'
-        f'<span class="stat__l">RootHide</span></div>',
-    ])
+    SEC_DESC = {
+        "RootLess": "安装到 /var/jb/…，用于无根越狱",
+        "RootHide": "安装到 /Library/…，用于隐根环境",
+        "System": "守护进程与系统级工具",
+    }
+    stats = f'<div class="stat"><span class="stat__n">{data["stats"]["total"]}</span><span class="stat__l">插件总数</span></div>'
+    for sec in data["repo"]["sections"]:
+        stats += (f'<div class="stat"><span class="stat__n">{data["stats"]["by_section"].get(sec, 0)}</span>'
+                  f'<span class="stat__l">{esc(sec)}</span></div>')
 
     env_cards = ""
-    for sec, label, desc in (
-        ("RootLess", "Rootless", "安装到 /var/jb/…，用于无根越狱"),
-        ("RootHide", "RootHide", "安装到 /Library/…，用于隐根环境"),
-    ):
+    for sec in data["repo"]["sections"]:
         n = data["stats"]["by_section"].get(sec, 0)
-        cls = "rh" if sec == "RootHide" else "rl"
+        cls = {"RootHide": "rh", "System": "sys"}.get(sec, "rl")
         env_cards += (
             f'<a class="envcard" href="{root}packages/#{esc(sec)}">'
-            f'<span class="tag tag--{cls}">{label}</span>'
+            f'<span class="tag tag--{cls}">{esc(sec)}</span>'
             f'<span class="envcard__n">{n}</span>'
-            f'<span class="envcard__d">{esc(desc)}</span>'
+            f'<span class="envcard__d">{esc(SEC_DESC.get(sec, ""))}</span>'
             "</a>"
         )
 
@@ -166,7 +164,7 @@ def build_catalog(data: dict, root: str) -> str:
 
 def build_detail(data: dict, p: dict, root: str) -> str:
     initial = esc(p["name"][0].upper())
-    tag_class = "rh" if p["section"] == "RootHide" else "rl"
+    tag_class = {"RootHide": "rh", "System": "sys"}.get(p["section"], "rl")
     maintainer = (f'<div><dt>维护者</dt><dd>{esc(p["maintainer"])}</dd></div>'
                   if p["maintainer"] else "")
     depends = ""
@@ -230,7 +228,11 @@ def build_add(data: dict, root: str) -> str:
 
 
 def build_about(data: dict, root: str) -> str:
-    body = render("about.html", root=root, repo_url=esc(data["repo"]["url"]),
+    sec_rows = "".join(
+        f'<div><dt>{esc(sec)}</dt><dd>{esc({"RootLess": "无根越狱", "RootHide": "隐根环境", "System": "系统级组件"}.get(sec, sec))}</dd></div>'
+        for sec in data["repo"]["sections"]
+    )
+    body = render("about.html", root=root, sec_rows=sec_rows, repo_url=esc(data["repo"]["url"]),
                   package_count=data["stats"]["total"],
                   count_rootless=data["stats"]["by_section"].get("RootLess", 0),
                   count_roothide=data["stats"]["by_section"].get("RootHide", 0))
