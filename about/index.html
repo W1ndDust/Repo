@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>About · DustDrift-Repo</title>
+<meta name="description" content="关于 DustDrift 软件源。">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0C0E12" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F5F7FA" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../favicon.png" sizes="64x64">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/style.css?v=0131d3a4">
+</head>
+<body data-page="about">
+<a class="skip" href="#main">跳到主要内容</a>
+
+<header class="nav">
+  <div class="nav__in">
+    <a class="brand" href="../" aria-label="DustDrift 首页">
+      <img class="brand__mark" src="../favicon.png" alt="" width="26" height="26">
+      <span class="brand__word">DustDrift</span>
+    </a>
+    <button class="nav__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu">
+      <span class="vh">菜单</span>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+    </button>
+    <nav class="nav__menu" id="navMenu" aria-label="主导航">
+      <a href="../">Home</a>
+      <a href="../packages/">Packages</a>
+      <a href="../about/" aria-current="page">About</a>
+      <a class="btn btn--sm btn--primary nav__cta" href="../add/">Add Repository</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="pagehead">
+  <p class="kicker">About</p>
+  <h1 class="pagehead__title">关于 DustDrift</h1>
+</div>
+
+<section class="block">
+  <div class="prose">
+    <p>个人维护的 iOS 越狱插件源，现收录 3 个插件（Rootless 1 · RootHide 2）。版本、架构、依赖与校验值全部直接读自源的 APT 索引，网站只做排版，安装和更新仍由客户端完成。</p>
+  </div>
+</section>
+
+<section class="block">
+  <h2 class="block__title">分组依据</h2>
+  <dl class="specs specs--about">
+    <div><dt>Rootless</dt><dd>装到 <span class="mono">/var/jb/…</span>，用于无根越狱</dd></div>
+    <div><dt>RootHide</dt><dd>装到 <span class="mono">/Library/…</span>，用于隐根环境</dd></div>
+  </dl>
+  <p class="hint hint--inline">判定依据是包内文件的实际安装路径，不是包名。</p>
+</section>
+
+<section class="block block--quiet">
+  <h2 class="block__title">免责声明</h2>
+  <p class="block__text">插件由各自作者开发与授权。安装前请自行确认来源；若你是作者且不希望插件出现在这里，联系我下架。</p>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__in">
+    <div class="foot__brand">
+      <img src="../favicon.png" alt="" width="22" height="22">
+      <span>DustDrift-Repo</span>
+    </div>
+    <nav class="foot__links" aria-label="页脚导航">
+      <a href="../packages/">Packages</a>
+      <a href="../add/">Add Repository</a>
+      <a href="../about/">About</a>
+    </nav>
+    <p class="foot__meta">3 个插件 · 数据来自本站 APT 索引</p>
+  </div>
+</footer>
+
+<script src="../assets/app.js?v=0131d3a4" defer></script>
+</body>
+</html>

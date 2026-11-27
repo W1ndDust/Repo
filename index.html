@@ -3,76 +3,92 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>DustDrift-Repo · 越狱插件源</title>
-<meta name="description" content="DustDrift 个人插件源 · Sileo / Zebra / Irisin，共 3 个软件包。">
+<title>DustDrift-Repo · iOS 越狱插件源</title>
+<meta name="description" content="DustDrift 个人插件源 · Sileo / Zebra / Irisin，共 3 个插件。">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#F6F7F9" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#12151A" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#0C0E12" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F5F7FA" media="(prefers-color-scheme: light)">
 <link rel="icon" href="favicon.png" sizes="64x64">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="assets/style.css?v=f5dda57a">
+<link rel="stylesheet" href="assets/style.css?v=0131d3a4">
 </head>
-<body>
+<body data-page="home">
 <a class="skip" href="#main">跳到主要内容</a>
 
-<header class="top">
-  <div class="top__wrap">
-    <a class="brand" href="" aria-label="返回首页 · DustDrift-Repo">
-      <img src="favicon.png" alt="" width="28" height="28">
+<header class="nav">
+  <div class="nav__in">
+    <a class="brand" href="" aria-label="DustDrift 首页">
+      <img class="brand__mark" src="favicon.png" alt="" width="26" height="26">
+      <span class="brand__word">DustDrift</span>
     </a>
-    <button class="menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav">菜单</button>
-    <nav class="nav" id="nav" aria-label="主导航">
-      <a href="" aria-current="page">首页</a>
-      <a href="browse/">软件包</a>
-      <a href="add/">添加源</a>
+    <button class="nav__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu">
+      <span class="vh">菜单</span>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+    </button>
+    <nav class="nav__menu" id="navMenu" aria-label="主导航">
+      <a href="" aria-current="page">Home</a>
+      <a href="packages/">Packages</a>
+      <a href="about/">About</a>
+      <a class="btn btn--sm btn--primary nav__cta" href="add/">Add Repository</a>
     </nav>
-
   </div>
 </header>
 
 <main id="main">
-<section class="lede">
-  <h1>DustDrift-Repo</h1>
-  <p class="lede__sub">DustDrift 个人插件源 · Sileo / Zebra / Irisin</p>
-</section>
+<section class="hero">
+  <div class="hero__in">
+    <div class="hero__lead">
+      <p class="kicker">iOS 越狱插件源</p>
+      <h1 class="hero__title">DustDrift</h1>
+      <p class="hero__sub">3 个插件，按运行环境分组，装之前能看清依赖和校验值。</p>
+      <div class="hero__acts">
+        <a class="btn btn--primary" href="add/">添加软件源</a>
+        <a class="btn btn--ghost" href="packages/">浏览插件</a>
+      </div>
+    </div>
 
-<section class="copy" aria-labelledby="addr-h">
-  <h2 id="addr-h" class="vh">软件源地址</h2>
-  <p class="copy__addr" id="addr">https://w1nddust.github.io/Repo/</p>
-  <button class="btn btn--primary" type="button" data-copy="https://w1nddust.github.io/Repo/">复制源地址</button>
-</section>
-
-<section class="status" aria-label="源概况">
-  <p class="status__line">
-    <span><b>3</b> 个软件包</span>
-    <span>RootLess <b>1</b></span><span>RootHide <b>2</b></span>
-  </p>
-</section>
-
-<section class="block" aria-labelledby="sec-h"><div class="block__head"><h2 id="sec-h">分组</h2></div><ul class="rows"><li><a class="row" href="browse/#RootLess"><span class="row__body"><span class="row__name">RootLess</span></span><span class="row__meta">1</span><span class="row__chev" aria-hidden="true">›</span></a></li><li><a class="row" href="browse/#RootHide"><span class="row__body"><span class="row__name">RootHide</span></span><span class="row__meta">2</span><span class="row__chev" aria-hidden="true">›</span></a></li></ul></section>
-
-<section class="block" aria-labelledby="all-h">
-  <div class="block__head">
-    <h2 id="all-h">全部软件包</h2>
-    <a class="more" href="browse/">浏览<span class="more__n">3</span></a>
+    <aside class="rail" aria-label="插件索引">
+      <p class="rail__head"><span>Index</span><span>3 项</span></p>
+      <ol class="rail__list">
+<li><a href="packages/com.mallin.tunnelsharevpn/"><span class="rail__num">01</span><span class="rail__name">TunnelShareVPN</span><span class="rail__env">RootHide</span></a></li><li><a href="packages/com.wcplugins.tweak/"><span class="rail__num">02</span><span class="rail__name">WCPlugins</span><span class="rail__env">Rootless</span></a></li><li><a href="packages/com.wcplugins.tweak.roothide/"><span class="rail__num">03</span><span class="rail__name">WCPlugins（隐根）</span><span class="rail__env">RootHide</span></a></li>
+      </ol>
+    </aside>
   </div>
-  <ul class="rows">
-<li data-section="RootLess" data-name="WCPlugins" data-version="2.1" data-search="wcplugins com.wcplugins.tweak 微信插件管理：外观自定义、拖动排序、显隐与重命名。 rootless"><a class="row" href="p/com.wcplugins.tweak/"><span class="row__mark" aria-hidden="true">W</span><span class="row__body"><span class="row__name">WCPlugins</span><span class="row__id">com.wcplugins.tweak</span><span class="row__desc">微信插件管理：外观自定义、拖动排序、显隐与重命名。</span><span class="row__meta">rootless · v2.1 · 110 KB</span></span></a></li><li data-section="RootHide" data-name="TunnelShareVPN" data-version="2.2.0-6" data-search="tunnelsharevpn com.mallin.tunnelsharevpn 1. 自动获取永久授权 roothide"><a class="row" href="p/com.mallin.tunnelsharevpn/"><span class="row__mark" aria-hidden="true">T</span><span class="row__body"><span class="row__name">TunnelShareVPN<span class="tag">RootHide</span></span><span class="row__id">com.mallin.tunnelsharevpn</span><span class="row__desc">1. 自动获取永久授权</span><span class="row__meta">rootless · v2.2.0-6 · 560 KB</span></span></a></li><li data-section="RootHide" data-name="WCPlugins（隐根）" data-version="2.1" data-search="wcplugins（隐根） com.wcplugins.tweak.roothide 微信插件管理：外观自定义、拖动排序、显隐与重命名。 roothide"><a class="row" href="p/com.wcplugins.tweak.roothide/"><span class="row__mark" aria-hidden="true">W</span><span class="row__body"><span class="row__name">WCPlugins（隐根）<span class="tag">RootHide</span></span><span class="row__id">com.wcplugins.tweak.roothide</span><span class="row__desc">微信插件管理：外观自定义、拖动排序、显隐与重命名。</span><span class="row__meta">rootless · v2.1 · 110 KB</span></span></a></li>
-  </ul>
 </section>
 
-<section class="block block--quiet">
-  <h2>添加方法</h2>
-  <p>Sileo 和 Irisin 可以一键添加；Zebra 需手动粘贴地址。</p>
-  <p><a class="link" href="add/">查看各客户端的添加步骤</a></p>
+<section class="stats" aria-label="统计">
+<div class="stat"><span class="stat__n">3</span><span class="stat__l">插件总数</span></div><div class="stat"><span class="stat__n">1</span><span class="stat__l">Rootless</span></div><div class="stat"><span class="stat__n">2</span><span class="stat__l">RootHide</span></div>
+</section>
+
+<section class="band band--envs">
+  <div class="band__in">
+    <div class="band__head">
+      <h2 class="band__title">按环境浏览</h2>
+      <a class="more" href="packages/">全部 3 个</a>
+    </div>
+    <div class="envs">
+<a class="envcard" href="packages/#RootLess"><span class="tag tag--rl">Rootless</span><span class="envcard__n">1</span><span class="envcard__d">安装到 /var/jb/…，用于无根越狱</span></a><a class="envcard" href="packages/#RootHide"><span class="tag tag--rh">RootHide</span><span class="envcard__n">2</span><span class="envcard__d">安装到 /Library/…，用于隐根环境</span></a>
+    </div>
+  </div>
 </section>
 
 </main>
 
 <footer class="foot">
-  <p class="foot__meta">DustDrift-Repo · 3 个软件包</p>
+  <div class="foot__in">
+    <div class="foot__brand">
+      <img src="favicon.png" alt="" width="22" height="22">
+      <span>DustDrift-Repo</span>
+    </div>
+    <nav class="foot__links" aria-label="页脚导航">
+      <a href="packages/">Packages</a>
+      <a href="add/">Add Repository</a>
+      <a href="about/">About</a>
+    </nav>
+    <p class="foot__meta">3 个插件 · 数据来自本站 APT 索引</p>
+  </div>
 </footer>
 
-<script src="assets/app.js?v=f5dda57a" defer></script>
+<script src="assets/app.js?v=0131d3a4" defer></script>
 </body>
 </html>

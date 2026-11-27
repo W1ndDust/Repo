@@ -2,50 +2,88 @@
   "repo": {
     "label": "DustDrift-Repo",
     "description": "DustDrift 个人插件源 · Sileo / Zebra / Irisin",
-    "source_url": "https://w1nddust.github.io/Repo/",
+    "url": "https://w1nddust.github.io/Repo/",
     "sections": [
       "RootLess",
       "RootHide"
     ]
   },
-  "generated_from": "Packages",
-  "package_count": 3,
+  "stats": {
+    "total": 3,
+    "by_section": {
+      "RootLess": 1,
+      "RootHide": 2
+    }
+  },
   "packages": [
     {
-      "package": "com.wcplugins.tweak",
-      "name": "WCPlugins",
-      "version": "2.1",
-      "arch": "iphoneos-arm64",
-      "section": "RootLess",
-      "size": "113120",
-      "filename": "./debs/com.wcplugins.tweak_2.1_iphoneos-arm64.deb",
-      "sha256": "2e2dc7842a20b27e05517e9aead7dd7a606660c08faf3a6df20732d9deb666df",
-      "description": "微信插件管理：外观自定义、拖动排序、显隐与重命名。",
-      "url": "p/com.wcplugins.tweak/"
-    },
-    {
       "package": "com.mallin.tunnelsharevpn",
+      "slug": "com.mallin.tunnelsharevpn",
       "name": "TunnelShareVPN",
       "version": "2.2.0-6",
-      "arch": "iphoneos-arm64",
+      "architecture": "iphoneos-arm64",
       "section": "RootHide",
-      "size": "573474",
-      "filename": "./debs/com.mallin.tunnelsharevpn_2.2.0-6_iphoneos-arm64.deb",
+      "env": "RootHide",
+      "summary": "1. 自动获取永久授权",
+      "description": "3. 功能1：实现本手机的科学上网功能直接通过热点形式分享给其他设备；\n4. 功能2：☆支持热点连接Wi-Fi时流量走Wi-Fi，而不是手机的“蜂窝网络”☆；\n5. 功能3：WiFi热点分享时，支持关闭“蜂窝网络”；\n6. 在“设置-控制中心”添加快捷键，即可实现一键操作或者手动模式进行分享；\n7. 本插件只限用于学术科研与查阅外网资料！\n8. 作者QQ：523635737 好用请支持正版",
+      "maintainer": "Mallin",
+      "author": "Mallin",
+      "depends": [
+        "firmware (>= 15.0)",
+        "mobilesubstrate | substitute | libhooker | ellekit",
+        "com.opa334.ccsupport",
+        "preferenceloader"
+      ],
+      "filename": "debs/com.mallin.tunnelsharevpn_2.2.0-6_iphoneos-arm64.deb",
+      "size": 573474,
+      "size_label": "560 KB",
       "sha256": "e580eaddd8c3b1dc06a3b8d9405929a11462d6dc3bc23b12efd2e261696d7e84",
-      "description": "1. 自动获取永久授权",
-      "url": "p/com.mallin.tunnelsharevpn/"
+      "homepage": "",
+      "changelog": "depictions/changelogs/com.mallin.tunnelsharevpn.md"
+    },
+    {
+      "package": "com.wcplugins.tweak",
+      "slug": "com.wcplugins.tweak",
+      "name": "WCPlugins",
+      "version": "2.1",
+      "architecture": "iphoneos-arm64",
+      "section": "RootLess",
+      "env": "Rootless",
+      "summary": "微信插件管理：外观自定义、拖动排序、显隐与重命名。",
+      "description": "",
+      "maintainer": "WCPlugins",
+      "author": "WCPlugins",
+      "depends": [
+        "firmware (>= 11.0)"
+      ],
+      "filename": "debs/com.wcplugins.tweak_2.1_iphoneos-arm64.deb",
+      "size": 113120,
+      "size_label": "110 KB",
+      "sha256": "2e2dc7842a20b27e05517e9aead7dd7a606660c08faf3a6df20732d9deb666df",
+      "homepage": "",
+      "changelog": "depictions/changelogs/com.wcplugins.tweak.md"
     },
     {
       "package": "com.wcplugins.tweak.roothide",
+      "slug": "com.wcplugins.tweak.roothide",
       "name": "WCPlugins（隐根）",
       "version": "2.1",
-      "arch": "iphoneos-arm64",
+      "architecture": "iphoneos-arm64",
       "section": "RootHide",
-      "size": "113108",
-      "filename": "./debs/com.wcplugins.tweak.roothide_2.1_iphoneos-arm64.deb",
+      "env": "RootHide",
+      "summary": "微信插件管理：外观自定义、拖动排序、显隐与重命名。",
+      "description": "",
+      "maintainer": "WCPlugins",
+      "author": "WCPlugins",
+      "depends": [
+        "firmware (>= 11.0)"
+      ],
+      "filename": "debs/com.wcplugins.tweak.roothide_2.1_iphoneos-arm64.deb",
+      "size": 113108,
+      "size_label": "110 KB",
       "sha256": "a8b52573f38f8da197e499d4a5c04c5b03113f65de8065ed8d2bc00d2c9a9673",
-      "description": "微信插件管理：外观自定义、拖动排序、显隐与重命名。",
-      "url": "p/com.wcplugins.tweak.roothide/"
+      "homepage": "",
+      "changelog": "depictions/changelogs/com.wcplugins.tweak.roothide.md"
     }
   ]
 }

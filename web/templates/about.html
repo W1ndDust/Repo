@@ -1,0 +1,24 @@
+<div class="pagehead">
+  <p class="kicker">About</p>
+  <h1 class="pagehead__title">关于 DustDrift</h1>
+</div>
+
+<section class="block">
+  <div class="prose">
+    <p>个人维护的 iOS 越狱插件源，现收录 {{package_count}} 个插件（Rootless {{count_rootless}} · RootHide {{count_roothide}}）。版本、架构、依赖与校验值全部直接读自源的 APT 索引，网站只做排版，安装和更新仍由客户端完成。</p>
+  </div>
+</section>
+
+<section class="block">
+  <h2 class="block__title">分组依据</h2>
+  <dl class="specs specs--about">
+    <div><dt>Rootless</dt><dd>装到 <span class="mono">/var/jb/…</span>，用于无根越狱</dd></div>
+    <div><dt>RootHide</dt><dd>装到 <span class="mono">/Library/…</span>，用于隐根环境</dd></div>
+  </dl>
+  <p class="hint hint--inline">判定依据是包内文件的实际安装路径，不是包名。</p>
+</section>
+
+<section class="block block--quiet">
+  <h2 class="block__title">免责声明</h2>
+  <p class="block__text">插件由各自作者开发与授权。安装前请自行确认来源；若你是作者且不希望插件出现在这里，联系我下架。</p>
+</section>

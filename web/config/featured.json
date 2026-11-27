@@ -1,0 +1,7 @@
+{
+  "_comment": "精选位。只能写索引里真实存在的 Package ID，构建时会校验，写错直接失败。",
+  "packages": [
+    "com.wcplugins.tweak",
+    "com.mallin.tunnelsharevpn"
+  ]
+}

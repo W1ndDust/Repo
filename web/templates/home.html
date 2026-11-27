@@ -1,35 +1,36 @@
-<section class="lede">
-  <h1>{{label}}</h1>
-  <p class="lede__sub">{{description}}</p>
-</section>
+<section class="hero">
+  <div class="hero__in">
+    <div class="hero__lead">
+      <p class="kicker">iOS 越狱插件源</p>
+      <h1 class="hero__title">DustDrift</h1>
+      <p class="hero__sub">{{package_count}} 个插件，按运行环境分组，装之前能看清依赖和校验值。</p>
+      <div class="hero__acts">
+        <a class="btn btn--primary" href="{{root}}add/">添加软件源</a>
+        <a class="btn btn--ghost" href="{{root}}packages/">浏览插件</a>
+      </div>
+    </div>
 
-<section class="copy" aria-labelledby="addr-h">
-  <h2 id="addr-h" class="vh">软件源地址</h2>
-  <p class="copy__addr" id="addr">{{source_url}}</p>
-  <button class="btn btn--primary" type="button" data-copy="{{source_url}}">复制源地址</button>
-</section>
-
-<section class="status" aria-label="源概况">
-  <p class="status__line">
-    <span><b>{{package_count}}</b> 个软件包</span>
-    {{section_counts}}
-  </p>
-</section>
-
-{{section_list}}
-
-<section class="block" aria-labelledby="all-h">
-  <div class="block__head">
-    <h2 id="all-h">全部软件包</h2>
-    <a class="more" href="{{root}}browse/">浏览<span class="more__n">{{package_count}}</span></a>
+    <aside class="rail" aria-label="插件索引">
+      <p class="rail__head"><span>Index</span><span>{{package_count}} 项</span></p>
+      <ol class="rail__list">
+{{rail_items}}
+      </ol>
+    </aside>
   </div>
-  <ul class="rows">
-{{rows}}
-  </ul>
 </section>
 
-<section class="block block--quiet">
-  <h2>添加方法</h2>
-  <p>Sileo 和 Irisin 可以一键添加；Zebra 需手动粘贴地址。</p>
-  <p><a class="link" href="{{root}}add/">查看各客户端的添加步骤</a></p>
+<section class="stats" aria-label="统计">
+{{stats}}
+</section>
+
+<section class="band band--envs">
+  <div class="band__in">
+    <div class="band__head">
+      <h2 class="band__title">按环境浏览</h2>
+      <a class="more" href="{{root}}packages/">全部 {{package_count}} 个</a>
+    </div>
+    <div class="envs">
+{{env_cards}}
+    </div>
+  </div>
 </section>

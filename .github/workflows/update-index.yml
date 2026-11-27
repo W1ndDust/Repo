@@ -15,8 +15,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: index
-  cancel-in-progress: true
+  group: repo-write
+  cancel-in-progress: false
 
 jobs:
   build:

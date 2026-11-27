@@ -1,35 +1,48 @@
 <nav class="crumb" aria-label="位置">
-  <a href="{{root}}browse/">软件包</a><span aria-hidden="true">/</span><span>{{section}}</span>
+  <a href="{{root}}packages/">Packages</a><span aria-hidden="true">/</span><span>{{env}}</span>
 </nav>
 
-<header class="pkg-head">
-  <div class="pkg-head__mark" aria-hidden="true">{{initial}}</div>
-  <div>
-    <h1>{{name}}</h1>
-    <p class="pkg-head__id">{{package}}</p>
+<header class="pkghead">
+  <div class="pkghead__icon" aria-hidden="true">{{initial}}</div>
+  <div class="pkghead__text">
+    <h1 class="pkghead__name">{{name}}</h1>
+    <p class="pkghead__id">{{package}}</p>
   </div>
+  <span class="tag tag--{{tag_class}}">{{env}}</span>
 </header>
 
-{{open_actions}}
+<p class="pkghead__summary">{{summary}}</p>
 
-<dl class="facts">
+<div class="acts">
+  <a class="btn btn--primary btn--sm" href="sileo://package/{{package}}">用 Sileo 打开</a>
+  <a class="btn btn--ghost btn--sm" href="irisin://package/{{package}}">用 Irisin 打开</a>
+</div>
+<p class="hint">需先添加本源，否则客户端会提示找不到该插件。</p>
+
+<dl class="specs">
   <div><dt>版本</dt><dd>{{version}}</dd></div>
-  <div><dt>架构</dt><dd>{{arch}}</dd></div>
-  <div><dt>大小</dt><dd>{{size}}</dd></div>
-  <div><dt>分组</dt><dd>{{section}}</dd></div>
-  {{maintainer_fact}}
+  <div><dt>架构</dt><dd>{{architecture}}</dd></div>
+  <div><dt>大小</dt><dd>{{size_label}}</dd></div>
+  <div><dt>分组</dt><dd>{{env}}</dd></div>
+  {{maintainer}}
 </dl>
 
 <section class="block">
-  <h2>描述</h2>
-  <p class="prose">{{description}}</p>
+  <h2 class="block__title">描述</h2>
+  <div class="prose">{{description}}</div>
 </section>
 
-{{depends_block}}
+{{depends}}
 
 <section class="block">
-  <h2>获取</h2>
-  <p><a class="link" href="{{root}}{{filename}}" download>下载 .deb 文件</a></p>
-  <p class="mono-note">{{file}}</p>
-  <p class="mono-note">SHA256 <span class="mono">{{sha256_short}}</span> <button class="mini" type="button" data-copy="{{sha256}}" aria-label="复制完整 SHA256">复制</button></p>
+  <h2 class="block__title">获取</h2>
+  <div class="getrow">
+    <a class="btn btn--ghost btn--sm" href="{{root}}{{filename}}" download>下载 .deb</a>
+    <span class="mono">{{file_name}}</span>
+  </div>
+  <p class="mono-line">SHA256 <span class="mono">{{sha_short}}</span>
+    <button class="mini" type="button" data-copy="{{sha256}}">复制</button>
+  </p>
 </section>
+
+{{changelog}}

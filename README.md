@@ -63,14 +63,31 @@ rootful 包加 `-r rootful`；产物在 `out/<id>_<ver>_<arch>.deb`。
 
 ## 网站
 
-站点由 `web/build.py` 从 `Packages` / `Release` 生成，输出到仓库根目录（Pages 直接服务 `main` 根目录）。
+站点由三个脚本分三层生成，数据只有一条链：**debs → Packages → data/packages.json → 页面**。
 
 ```sh
-python3 web/build.py          # 生成
-python3 web/build.py --check  # 只校验，不写盘
+python3 scripts/gen_index.py .   # 1) APT 索引：Packages / Packages.gz / Release
+python3 web/build_data.py        # 2) 网页数据：校验后输出 data/packages.json
+python3 web/build.py             # 3) 页面：首页 / packages / 详情 / add / about / 404
+python3 web/build_depiction.py   # 4) SileoDepiction（详情 + 更新日志页签）
 ```
 
-- 源码：`web/templates/*.html`（模板）、`web/assets/style.css`（Token 与布局）、`web/assets/app.js`（搜索/筛选/复制/主题）
-- 设计规范与令牌：`spec/交付B-设计方向与方案.md`
-- 构建脚本只会写白名单路径（`index.html` `404.html` `browse/` `add/` `p/` `assets/` `data/`），并在结束时校验 `Packages`/`Packages.gz`/`Release` 的 SHA256 未变；一旦变化即报错退出
-- 目录名用 `p/` 而非 `packages/`，避免与 APT 的 `Packages` 文件在大小写不敏感的环境下冲突
+**数据校验**（`web/build_data.py`，失败即中止）：Package ID 唯一、必需字段齐全、
+`Filename` 指向的文件真实存在、`Size` 与 `SHA256` 对得上、`Section` 属于配置分组、
+架构属于已知 iOS 架构。
+
+**安全边界**：`web/build.py` 只写白名单路径（`index.html` `404.html` `packages/` `add/`
+`about/` `assets/` `data/`），构建前后对 `Packages` / `Packages.gz` / `Release` 做 SHA256
+比对，不一致立即报错退出。
+
+**目录约定**：详情页是 `/packages/<package-id>/`。注意它与 APT 的 `Packages` 文件仅差大小写——
+在 Linux / GitHub Pages 上共存无碍，但**不要在 macOS / Windows 上克隆后直接构建**，
+大小写不敏感的文件系统会让两者冲突。
+
+**精选位**：`web/config/featured.json`。里面写的 Package ID 必须真实存在，否则构建失败；
+首页索引栏按这个顺序排序。
+
+**路由**：`/`、`/packages/`、`/packages/<id>/`、`/add/`、`/about/`、`/404.html`，全部目录式静态页，
+刷新不会 404。
+
+- 设计规范与令牌：`spec2/交付AB-审计与设计规范.md`

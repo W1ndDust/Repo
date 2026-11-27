@@ -4,49 +4,65 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>页面不存在 · DustDrift-Repo</title>
-<meta name="description" content="这个页面不存在。">
+<meta name="description" content="页面不存在。">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#F6F7F9" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#12151A" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#0C0E12" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F5F7FA" media="(prefers-color-scheme: light)">
 <link rel="icon" href="favicon.png" sizes="64x64">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="stylesheet" href="assets/style.css?v=f5dda57a">
+<link rel="stylesheet" href="assets/style.css?v=0131d3a4">
 </head>
-<body>
+<body data-page="404">
 <a class="skip" href="#main">跳到主要内容</a>
 
-<header class="top">
-  <div class="top__wrap">
-    <a class="brand" href="" aria-label="返回首页 · DustDrift-Repo">
-      <img src="favicon.png" alt="" width="28" height="28">
+<header class="nav">
+  <div class="nav__in">
+    <a class="brand" href="" aria-label="DustDrift 首页">
+      <img class="brand__mark" src="favicon.png" alt="" width="26" height="26">
+      <span class="brand__word">DustDrift</span>
     </a>
-    <button class="menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav">菜单</button>
-    <nav class="nav" id="nav" aria-label="主导航">
-      <a href="">首页</a>
-      <a href="browse/">软件包</a>
-      <a href="add/">添加源</a>
+    <button class="nav__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu">
+      <span class="vh">菜单</span>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+    </button>
+    <nav class="nav__menu" id="navMenu" aria-label="主导航">
+      <a href="">Home</a>
+      <a href="packages/">Packages</a>
+      <a href="about/">About</a>
+      <a class="btn btn--sm btn--primary nav__cta" href="add/">Add Repository</a>
     </nav>
-
   </div>
 </header>
 
 <main id="main">
-<div class="page-head">
-  <h1>这个页面不存在</h1>
-  <p class="page-head__meta">地址可能已经变了，或者软件包已被移除。</p>
+<div class="pagehead">
+  <p class="kicker">404</p>
+  <h1 class="pagehead__title">这个页面不存在</h1>
+  <p class="pagehead__meta">链接可能过期，或者插件已经下架。</p>
 </div>
 
-<p>
-  <a class="btn btn--primary" href="">回首页</a>
-  <a class="btn btn--quiet" href="browse/">看全部软件包</a>
+<p class="acts acts--left">
+  <a class="btn btn--primary btn--sm" href="">回首页</a>
+  <a class="btn btn--ghost btn--sm" href="packages/">看全部插件</a>
 </p>
 
 </main>
 
 <footer class="foot">
-  <p class="foot__meta">DustDrift-Repo · 3 个软件包</p>
+  <div class="foot__in">
+    <div class="foot__brand">
+      <img src="favicon.png" alt="" width="22" height="22">
+      <span>DustDrift-Repo</span>
+    </div>
+    <nav class="foot__links" aria-label="页脚导航">
+      <a href="packages/">Packages</a>
+      <a href="add/">Add Repository</a>
+      <a href="about/">About</a>
+    </nav>
+    <p class="foot__meta">3 个插件 · 数据来自本站 APT 索引</p>
+  </div>
 </footer>
 
-<script src="assets/app.js?v=f5dda57a" defer></script>
+<script src="assets/app.js?v=0131d3a4" defer></script>
 </body>
 </html>

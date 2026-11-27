@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'web/**'
+      - 'depictions/**'
       - 'Packages'
       - 'Release'
       - 'CydiaIcon.png'
@@ -23,14 +24,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: 生成页面
-        run: python3 web/build.py
+      - name: 生成数据与页面
+        run: |
+          python3 web/build_data.py
+          python3 web/build.py
+          python3 web/build_depiction.py
 
       - name: 提交生成结果
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html 404.html browse add p assets data
+          git add index.html 404.html packages add about assets data depictions
           if git diff --cached --quiet; then
             echo "页面无变化"
             exit 0

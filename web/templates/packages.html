@@ -1,0 +1,35 @@
+<div class="pagehead">
+  <p class="kicker">Catalog</p>
+  <h1 class="pagehead__title">Packages</h1>
+  <p class="pagehead__meta">{{package_count}} 个插件 · 数据来自 APT 索引</p>
+</div>
+
+<div class="toolbar">
+  <label class="field" for="q">
+    <svg class="field__icon" viewBox="0 0 20 20" aria-hidden="true"><circle cx="9" cy="9" r="6"/><path d="M13.5 13.5 17 17"/></svg>
+    <input id="q" type="search" placeholder="搜索名称、ID、描述或作者" autocomplete="off" enterkeyhint="search">
+    <button class="field__clear" type="button" hidden aria-label="清除搜索">✕</button>
+  </label>
+
+  <div class="chips" role="tablist" aria-label="按环境筛选">
+    <button role="tab" type="button" data-section="" aria-selected="true">All<em>{{package_count}}</em></button>
+{{chips}}
+  </div>
+
+  <label class="select">
+    <span class="vh">排序</span>
+    <select id="sort">
+      <option value="name">按名称</option>
+      <option value="version">按版本</option>
+    </select>
+  </label>
+</div>
+
+<ol class="list" id="list">
+{{rows}}
+</ol>
+
+<div class="state" id="empty" hidden>
+  <p id="emptyText">没有匹配的插件</p>
+  <button class="btn btn--ghost btn--sm" type="button" id="clearAll">清除筛选</button>
+</div>

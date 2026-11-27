@@ -3,81 +3,104 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>添加源 · DustDrift-Repo</title>
-<meta name="description" content="把 DustDrift-Repo 添加到 Sileo、Irisin 或 Zebra 的步骤。">
+<title>Add Repository · DustDrift-Repo</title>
+<meta name="description" content="把 DustDrift 添加到 Sileo、Irisin 或 Zebra 的步骤。">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#F6F7F9" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#12151A" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#0C0E12" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F5F7FA" media="(prefers-color-scheme: light)">
 <link rel="icon" href="../favicon.png" sizes="64x64">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-<link rel="stylesheet" href="../assets/style.css?v=f5dda57a">
+<link rel="stylesheet" href="../assets/style.css?v=0131d3a4">
 </head>
-<body>
+<body data-page="add">
 <a class="skip" href="#main">跳到主要内容</a>
 
-<header class="top">
-  <div class="top__wrap">
-    <a class="brand" href="../" aria-label="返回首页 · DustDrift-Repo">
-      <img src="../favicon.png" alt="" width="28" height="28">
+<header class="nav">
+  <div class="nav__in">
+    <a class="brand" href="../" aria-label="DustDrift 首页">
+      <img class="brand__mark" src="../favicon.png" alt="" width="26" height="26">
+      <span class="brand__word">DustDrift</span>
     </a>
-    <button class="menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav">菜单</button>
-    <nav class="nav" id="nav" aria-label="主导航">
-      <a href="../">首页</a>
-      <a href="../browse/">软件包</a>
-      <a href="../add/" aria-current="page">添加源</a>
+    <button class="nav__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu">
+      <span class="vh">菜单</span>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+    </button>
+    <nav class="nav__menu" id="navMenu" aria-label="主导航">
+      <a href="../">Home</a>
+      <a href="../packages/">Packages</a>
+      <a href="../about/">About</a>
+      <a class="btn btn--sm btn--primary nav__cta" href="../add/">Add Repository</a>
     </nav>
-
   </div>
 </header>
 
 <main id="main">
-<div class="page-head">
-  <h1>添加 DustDrift-Repo</h1>
-  <p class="page-head__meta">先把地址复制走，再按客户端粘贴。</p>
+<div class="pagehead">
+  <p class="kicker">Add Repository</p>
+  <h1 class="pagehead__title">添加 DustDrift</h1>
 </div>
 
-<section class="copy" aria-labelledby="addr-h2">
-  <h2 id="addr-h2" class="vh">软件源地址</h2>
-  <p class="copy__addr">https://w1nddust.github.io/Repo/</p>
-  <button class="btn btn--primary" type="button" data-copy="https://w1nddust.github.io/Repo/">复制源地址</button>
+<section class="copybox">
+  <p class="copybox__url">https://w1nddust.github.io/Repo/</p>
+  <button class="btn btn--primary" type="button" data-copy="https://w1nddust.github.io/Repo/">复制地址</button>
 </section>
 
-<section class="block">
-  <h2>1 · Sileo</h2>
-  <p>已安装 Sileo 时，点下面的按钮会直接跳到添加页面。</p>
-  <p><a class="btn btn--quiet" href="sileo://source/https://w1nddust.github.io/Repo/">在 Sileo 中打开</a></p>
-  <p class="note">没反应说明还没装 Sileo：打开 <code>sileo</code> 后走「源 → 右上角 + → 粘贴地址」。</p>
+<section class="addgrid">
+  <div class="qrwrap">
+    <img class="qr" src="../assets/repo-qr.png" alt="软件源地址二维码：https://w1nddust.github.io/Repo/" width="120" height="120">
+    <p class="qrwrap__cap">相机扫码后选 Sileo 或 Irisin</p>
+  </div>
+
+  <ul class="clients">
+    <li>
+      <span class="clients__name">Sileo</span>
+      <a class="btn btn--ghost btn--sm" href="sileo://source/https://w1nddust.github.io/Repo/">打开</a>
+    </li>
+    <li>
+      <span class="clients__name">Irisin</span>
+      <a class="btn btn--ghost btn--sm" href="irisin://repository/add?url=https://w1nddust.github.io/Repo/">添加</a>
+    </li>
+    <li>
+      <span class="clients__name">Zebra</span>
+      <span class="clients__note">需手动粘贴（客户端未实现一键）</span>
+    </li>
+  </ul>
 </section>
 
-<section class="block">
-  <h2>2 · Irisin</h2>
-  <p>Irisin 使用它自己的链接格式，点按钮即可添加。</p>
-  <p><a class="btn btn--quiet" href="irisin://repository/add?url=https://w1nddust.github.io/Repo/">在 Irisin 中添加</a></p>
-  <p class="note">Irisin 会自动去掉地址末尾的斜杠。</p>
-</section>
-
-<section class="block">
-  <h2>3 · Zebra</h2>
-  <p>Zebra 2 尚未实现一键添加（其源码中的 <code>zbra://</code> 分支仍是 <code>TODO</code>），请手动添加：</p>
+<details class="fold">
+  <summary>手动添加步骤</summary>
   <ol class="steps">
-    <li>打开 Zebra，进入「源」</li>
-    <li>点右上角 <b>+</b></li>
-    <li>粘贴上面的地址</li>
-    <li>回到源列表下拉刷新</li>
+    <li>打开客户端的「源」，点右上角 <b>+</b></li>
+    <li>粘贴上面的地址并保存</li>
+    <li>回到源列表下拉刷新，插件即出现</li>
   </ol>
-</section>
+</details>
 
-<section class="block block--quiet">
-  <h2>添加之后</h2>
-  <p>软件包需要重新刷新源才会出现。</p>
-</section>
+<details class="fold">
+  <summary>命令行方式</summary>
+  <pre class="code">apt update
+apt install &lt;包名&gt;</pre>
+</details>
+
+<p class="hint">Zebra 2 源码中的 <code>zbra://</code> 分支仍是 <code>// TODO</code>，因此不提供一键入口。</p>
 
 </main>
 
 <footer class="foot">
-  <p class="foot__meta">DustDrift-Repo · 3 个软件包</p>
+  <div class="foot__in">
+    <div class="foot__brand">
+      <img src="../favicon.png" alt="" width="22" height="22">
+      <span>DustDrift-Repo</span>
+    </div>
+    <nav class="foot__links" aria-label="页脚导航">
+      <a href="../packages/">Packages</a>
+      <a href="../add/">Add Repository</a>
+      <a href="../about/">About</a>
+    </nav>
+    <p class="foot__meta">3 个插件 · 数据来自本站 APT 索引</p>
+  </div>
 </footer>
 
-<script src="../assets/app.js?v=f5dda57a" defer></script>
+<script src="../assets/app.js?v=0131d3a4" defer></script>
 </body>
 </html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WCPlugins · DustDrift-Repo</title>
+<meta name="description" content="微信插件管理：外观自定义、拖动排序、显隐与重命名。">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0C0E12" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F5F7FA" media="(prefers-color-scheme: light)">
+<link rel="icon" href="../../favicon.png" sizes="64x64">
+<link rel="apple-touch-icon" href="../../apple-touch-icon.png">
+<link rel="stylesheet" href="../../assets/style.css?v=0131d3a4">
+</head>
+<body data-page="packages">
+<a class="skip" href="#main">跳到主要内容</a>
+
+<header class="nav">
+  <div class="nav__in">
+    <a class="brand" href="../../" aria-label="DustDrift 首页">
+      <img class="brand__mark" src="../../favicon.png" alt="" width="26" height="26">
+      <span class="brand__word">DustDrift</span>
+    </a>
+    <button class="nav__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navMenu">
+      <span class="vh">菜单</span>
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+    </button>
+    <nav class="nav__menu" id="navMenu" aria-label="主导航">
+      <a href="../../">Home</a>
+      <a href="../../packages/" aria-current="page">Packages</a>
+      <a href="../../about/">About</a>
+      <a class="btn btn--sm btn--primary nav__cta" href="../../add/">Add Repository</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<nav class="crumb" aria-label="位置">
+  <a href="../../packages/">Packages</a><span aria-hidden="true">/</span><span>Rootless</span>
+</nav>
+
+<header class="pkghead">
+  <div class="pkghead__icon" aria-hidden="true">W</div>
+  <div class="pkghead__text">
+    <h1 class="pkghead__name">WCPlugins</h1>
+    <p class="pkghead__id">com.wcplugins.tweak</p>
+  </div>
+  <span class="tag tag--rl">Rootless</span>
+</header>
+
+<p class="pkghead__summary">微信插件管理：外观自定义、拖动排序、显隐与重命名。</p>
+
+<div class="acts">
+  <a class="btn btn--primary btn--sm" href="sileo://package/com.wcplugins.tweak">用 Sileo 打开</a>
+  <a class="btn btn--ghost btn--sm" href="irisin://package/com.wcplugins.tweak">用 Irisin 打开</a>
+</div>
+<p class="hint">需先添加本源，否则客户端会提示找不到该插件。</p>
+
+<dl class="specs">
+  <div><dt>版本</dt><dd>2.1</dd></div>
+  <div><dt>架构</dt><dd>iphoneos-arm64</dd></div>
+  <div><dt>大小</dt><dd>110 KB</dd></div>
+  <div><dt>分组</dt><dd>Rootless</dd></div>
+  <div><dt>维护者</dt><dd>WCPlugins</dd></div>
+</dl>
+
+<section class="block">
+  <h2 class="block__title">描述</h2>
+  <div class="prose">未提供详细描述。</div>
+</section>
+
+<section class="block"><h2 class="block__title">依赖</h2><ul class="deps"><li><span class="mono">firmware (&gt;= 11.0)</span></li></ul></section>
+
+<section class="block">
+  <h2 class="block__title">获取</h2>
+  <div class="getrow">
+    <a class="btn btn--ghost btn--sm" href="../../debs/com.wcplugins.tweak_2.1_iphoneos-arm64.deb" download>下载 .deb</a>
+    <span class="mono">com.wcplugins.tweak_2.1_iphoneos-arm64.deb</span>
+  </div>
+  <p class="mono-line">SHA256 <span class="mono">2e2dc7842a20b27e05517e9a…</span>
+    <button class="mini" type="button" data-copy="2e2dc7842a20b27e05517e9aead7dd7a606660c08faf3a6df20732d9deb666df">复制</button>
+  </p>
+</section>
+
+<section class="block"><h2 class="block__title">更新记录</h2><div class="changelog"><p class="cver"><b>v2.0</b></p><ul class="clist"><li>新增插件分类：面板顶部可切换分类，管理页可配置分类与插件归属</li><li>管理页界面布局优化，板块顺序更合理，操作更顺手</li><li>新增分类管理页：分类增删改名、插件归属批量调整</li><li>新增「清空全部配置」入口（分类与归属一键恢复）</li></ul><p class="cver"><b>v1.9</b></p><ul class="clist"><li>修复拖拽排序后，插件面板不实时刷新的问题</li><li>修复相册/文件/拍照导入 Logo 后界面卡住的问题</li></ul><p class="cver"><b>v1.8</b></p><ul class="clist"><li>修复相册导入 Logo 后偶发不生效的问题（导入回调线程处理优化）</li><li>精简插件管理页内部代码，移除冗余逻辑</li><li>统一代码结构，为后续功能迭代打基础</li></ul><p class="cver"><b>v1.7</b></p><ul class="clist"><li>修复：隐藏面板 Logo、标题或描述后，面板中仍残留占位内容的问题</li></ul><p class="cver"><b>v1.6</b></p><ul class="clist"><li>全面打磨交互动画细节，包括拖拽排序吸附、开关切换与页面过渡</li><li>统一动效规范，操作响应更加跟手流畅</li><li>修复若干已知问题，提升整体稳定性</li></ul><p class="cver"><b>v1.5</b></p><ul class="clist"><li>插件管理页界面全面重构，采用卡片式分组布局</li><li>视觉风格焕新，排版层次更清晰</li></ul><p class="cver"><b>v1.4</b></p><ul class="clist"><li>插件管理页右上角齿轮换为系统样式，不再被染色变蓝</li><li>修复打开插件显隐开关时排序区不增行、偶发崩溃的问题</li><li>外观自定义：面板描述改为独立编辑页，支持恢复默认与清空</li><li>「关于插件」新增更新日志页</li><li>修复长按拖动排序悬浮错位与落位乱飞</li></ul><p class="cver"><b>v1.3</b></p><ul class="clist"><li>外观自定义功能正式上线</li><li>支持自定义入口标题、面板标题与描述文字</li><li>支持自定义面板 Logo 显示方式</li><li>空值恢复默认、全空格清除占位，语义统一</li></ul><p class="cver"><b>v1.2</b></p><ul class="clist"><li>插件管理页新增「关于插件」板块</li><li>支持查看插件当前版本号</li></ul><p class="cver"><b>v1.1</b></p><ul class="clist"><li>新增插件管理功能：统一管理各插件的显示与隐藏</li><li>插件排序上线长按拖拽，松手即可完成排序</li><li>拖拽过程实时预览新顺序，松手一次性落盘</li></ul><p class="cver"><b>v1.0</b></p><ul class="clist"><li>插件排序功能上线：可自由调整面板内插件的展示顺序</li><li>新增插件重命名功能：支持自定义插件显示名称</li><li>管理页支持左滑快捷操作：重命名、上移、下移</li></ul></div></section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__in">
+    <div class="foot__brand">
+      <img src="../../favicon.png" alt="" width="22" height="22">
+      <span>DustDrift-Repo</span>
+    </div>
+    <nav class="foot__links" aria-label="页脚导航">
+      <a href="../../packages/">Packages</a>
+      <a href="../../add/">Add Repository</a>
+      <a href="../../about/">About</a>
+    </nav>
+    <p class="foot__meta">3 个插件 · 数据来自本站 APT 索引</p>
+  </div>
+</footer>
+
+<script src="../../assets/app.js?v=0131d3a4" defer></script>
+</body>
+</html>
