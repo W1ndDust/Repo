@@ -324,6 +324,28 @@ def build_404(repo: dict) -> str:
 # ────────────────────────── 写盘（白名单） ──────────────────────────
 WRITABLE = re.compile(r"^(index\.html|404\.html|(browse|add|p|assets|data)/)")
 
+def prune_package_pages(keep: set[str]) -> list[str]:
+    """删除已不在索引里的包详情页目录。
+
+    只处理 p/ 的一级子目录，且目录名必须等于 slug() 的结果，
+    避免误删 `Packages` 等同级 APT 文件。
+    """
+    pdir = ROOT / "p"
+    if not pdir.is_dir():
+        return []
+    removed = []
+    for child in sorted(pdir.iterdir()):
+        if not child.is_dir():
+            continue
+        if child.name in keep:
+            continue
+        if slug(child.name) != child.name:   # 不是本脚本生成的目录名，跳过
+            continue
+        shutil.rmtree(child)
+        removed.append(child.name)
+    return removed
+
+
 def write(rel: str, content: str) -> None:
     if not WRITABLE.match(rel):
         sys.exit(f"构建被拒绝：{rel} 不在白名单内（APT 文件只读）")
@@ -398,6 +420,10 @@ def main() -> None:
 
     for rel, content in files.items():
         write(rel, content)
+    # 清理已下架包的详情页，避免出现索引里没有、URL 却还能打开的孤儿页
+    removed = prune_package_pages({slug(p["Package"]) for p in pkgs})
+    if removed:
+        print("已清理过期详情页：", ", ".join(removed))
     # 静态资源原样复制
     for src in ASSETS.iterdir():
         if src.is_file():
