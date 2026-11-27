@@ -1,0 +1,27 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "tabname": "详情",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "* 仅支持 iOS 17 Relaxin 越狱\n\n* 解决非巨魔设备签名 Relaxin IPA 问题\n* Re-signing tool for iOS jailbreak",
+          "useSpacing": true
+        }
+      ]
+    },
+    {
+      "tabname": "更新日志",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "暂无更新日志。",
+          "useSpacing": true
+        }
+      ]
+    }
+  ]
+}

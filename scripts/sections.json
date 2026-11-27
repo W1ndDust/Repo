@@ -2,5 +2,9 @@
   "com.wcplugins.tweak": "RootLess",
   "com.wcplugins.tweak.roothide": "RootHide",
   "org.coolstar.libhooker": "System",
-  "ellekit": "System"
+  "ellekit": "System",
+  "cn.zqbb.jailfools": "TrollStore",
+  "com.iosdump.tslite": "TrollStore",
+  "ai.akemi.appsyncunified": "TrollStore",
+  "jp.soh.reprovisions": "TrollStore"
 }

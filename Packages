@@ -89,6 +89,7 @@ Size: 127100
 MD5sum: 7e36b8804d2047c73512397b30109eab
 SHA1: 4155030004a52491507c4db45dc6034796bc5a04
 SHA256: c3d07cadb6e2e18169b491a204343ae5410ca3979e92583b671ee2f0ec07cd79
+SileoDepiction: https://w1nddust.github.io/Repo/depictions/ellekit.json
 Description: ElleKit tweak injection libraries and loader
 
 Package: org.coolstar.libhooker
@@ -109,4 +110,77 @@ Installed-Size: 580
 MD5sum: e078d380d0f7be74afc9a4eb034f6255
 SHA1: d0d936f5d07c1b1dfa9b256dd805ba329c1521ed
 SHA256: 7399a07a516475ebb002fb36a2485279e784bd68ce690b361cdfe91e34701ca9
+SileoDepiction: https://w1nddust.github.io/Repo/depictions/org.coolstar.libhooker.json
 Description: libhooker engine, tweak loader and safe mode for iOS 16+ roothide
+
+Package: ai.akemi.appsyncunified
+Name: AppSync Unified
+Version: 116.0
+Architecture: iphoneos-arm64e
+Section: TrollStore
+Maintainer: Karen/あけみ <karen@akemi.ai>
+Author: Karen/あけみ, Linus Yang <karen@akemi.ai>
+Depends: firmware (>= 5.0), mobilesubstrate (>= 0.9.5100), firmware (<= 18.2)
+Conflicts: us.hackulo.appsync50, us.hackulo.appsync50plus, com.hackyouriphone.appsync7, com.teiron.ppsync, appsync50plus2.25pp, com.linusyang.appsync, com.sull.appsyncunified, com.sull.appsyncunifiedbeta, com.xsellize.appsync50, com.xsellize.appsync50plus, appsync50plus.178, appsync50plus2.178, cydia.net.angelxwind.appsyncunified, com.ifucker.appsync, com.sexyphonetech.appsyncunified, appsyncunifiedofficial, org.digbick.asufixed, cn.mingmei.asu623517234615234813, technology.goated.appsync, technology.goated.appsyncunified, vaginalfisting.appsynctool, science.xnu.substitute, akemi.appsink, akemi.appsyncunifed, akemi.appsyncunifed2, akemi.appsyncunifedpatched, appsyncpatched, appsyncrootless, weaponized.autism.technology.appsyncunified, ellekit (<< 1.1)
+Replaces: us.hackulo.appsync50, net.angelxwind.appsyncunified
+Provides: appsync, net.angelxwind.appsyncunified
+Homepage: https://cydia.akemi.ai/
+Filename: ./debs/ai.akemi.appsyncunified_116.0_iphoneos-arm64e.deb
+Size: 53712
+Installed-Size: 700
+MD5sum: e4ad9d1627719b92a94cc74c4d35bf04
+SHA1: a59027d8089cca6cb9366cfdf784e772b95b7c9e
+SHA256: a6359a79568471da3ff101e0cb71b28b028e8a134e0074d01ef7c7ef46a33656
+Description: Enables the ability to install unsigned/fakesigned iOS applications.
+
+Package: cn.zqbb.jailfools
+Name: JailFools
+Version: 5.2.1
+Architecture: iphoneos-arm64e
+Section: TrollStore
+Maintainer: zqbb <zqbbzz@gmail.com>
+Author: zqbb <zqbbzz@gmail.com>
+Depends: firmware (>= 15.0)
+Filename: ./debs/cn.zqbb.jailfools_5.2.1_iphoneos-arm64e.deb
+Size: 4600858
+Installed-Size: 16700
+MD5sum: 73f6cb523e0cd908b4a071849b6b2594
+SHA1: 61b474f5bbe46a22749dbb5174438dd315e17729
+SHA256: cb68b669ce9f8fd79f0faf327c8b7d5d609824df9506285dcd10da4c621dcc8a
+Description: Give me 108 yuan.
+
+Package: jp.soh.reprovisions
+Name: ReSign 苹果 ID 续签
+Version: 1.1.164
+Architecture: iphoneos-arm64e
+Section: TrollStore
+Priority: optional
+Maintainer: AmorCool <admin@reprovision.dev>
+Author: Coolapk@Analytics
+Depends: firmware (>= 15.0), zip, unzip
+Conflicts: jp.soh.reprovision
+Filename: ./debs/jp.soh.reprovisions_1.1.164_iphoneos-arm64e.deb
+Size: 6259978
+MD5sum: 130b7cbdf6f588c86bc9854fc711c7be
+SHA1: 13939cb1bb4ab47e4c7eae4c6ab1b246dfc4ef71
+SHA256: 4d8362e326ae69d7c1ca7f7069e7133182d6f0b12477e93cfb7fd6ad59427d28
+Description: 使用 苹果 ID 续签 IPA
+ * 仅支持 iOS 17 Relaxin 越狱
+ * 解决非巨魔设备签名 Relaxin IPA 问题
+ * Re-signing tool for iOS jailbreak
+
+Package: com.iosdump.tslite
+Name: TSLite(RootHide)
+Version: 2.1.1-2
+Architecture: iphoneos-arm64e
+Section: TrollStore
+Maintainer: opa334
+Author: opa334
+Depends: ldid
+Conflicts: com.opa334.trollstorelite, com.dao.tslite
+Filename: ./debs/com.iosdump.tslite_2.1.1-2_iphoneos-arm64e.deb
+Size: 3679176
+MD5sum: 9ef95fa117cb9927c4b5e7d3e58f964b
+SHA1: 8563e273e59d78c0e763a080172daa3add6cee1e
+SHA256: 23426e9bb86ee0ad8b6df796621844139e08785a9511b2a4675ba9561e352786
+Description: 越狱专用的APP安装器，iosdump修改版TrollStoreLite，功能多多(程序改名、换图标、解密、降级等)；同步最新代码v2.1.1-2：修复内置 ldid 生成的签名可执行段信息。

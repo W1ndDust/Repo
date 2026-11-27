@@ -11,15 +11,39 @@
     ]
   },
   "stats": {
-    "total": 6,
+    "total": 10,
     "by_section": {
       "RootLess": 1,
       "RootHide": 3,
       "System": 2,
-      "TrollStore": 0
+      "TrollStore": 4
     }
   },
   "packages": [
+    {
+      "package": "ai.akemi.appsyncunified",
+      "slug": "ai.akemi.appsyncunified",
+      "name": "AppSync Unified",
+      "version": "116.0",
+      "architecture": "iphoneos-arm64e",
+      "section": "TrollStore",
+      "env": "TrollStore",
+      "summary": "Enables the ability to install unsigned/fakesigned iOS applications.",
+      "description": "",
+      "maintainer": "Karen/あけみ <karen@akemi.ai>",
+      "author": "Karen/あけみ, Linus Yang <karen@akemi.ai>",
+      "depends": [
+        "firmware (>= 5.0)",
+        "mobilesubstrate (>= 0.9.5100)",
+        "firmware (<= 18.2)"
+      ],
+      "filename": "debs/ai.akemi.appsyncunified_116.0_iphoneos-arm64e.deb",
+      "size": 53712,
+      "size_label": "52 KB",
+      "sha256": "a6359a79568471da3ff101e0cb71b28b028e8a134e0074d01ef7c7ef46a33656",
+      "homepage": "https://cydia.akemi.ai/",
+      "changelog": "depictions/changelogs/ai.akemi.appsyncunified.md"
+    },
     {
       "package": "ellekit",
       "slug": "ellekit",
@@ -39,6 +63,52 @@
       "sha256": "c3d07cadb6e2e18169b491a204343ae5410ca3979e92583b671ee2f0ec07cd79",
       "homepage": "",
       "changelog": "depictions/changelogs/ellekit.md"
+    },
+    {
+      "package": "cn.zqbb.jailfools",
+      "slug": "cn.zqbb.jailfools",
+      "name": "JailFools",
+      "version": "5.2.1",
+      "architecture": "iphoneos-arm64e",
+      "section": "TrollStore",
+      "env": "TrollStore",
+      "summary": "Give me 108 yuan.",
+      "description": "",
+      "maintainer": "zqbb <zqbbzz@gmail.com>",
+      "author": "zqbb <zqbbzz@gmail.com>",
+      "depends": [
+        "firmware (>= 15.0)"
+      ],
+      "filename": "debs/cn.zqbb.jailfools_5.2.1_iphoneos-arm64e.deb",
+      "size": 4600858,
+      "size_label": "4.4 MB",
+      "sha256": "cb68b669ce9f8fd79f0faf327c8b7d5d609824df9506285dcd10da4c621dcc8a",
+      "homepage": "",
+      "changelog": "depictions/changelogs/cn.zqbb.jailfools.md"
+    },
+    {
+      "package": "jp.soh.reprovisions",
+      "slug": "jp.soh.reprovisions",
+      "name": "ReSign 苹果 ID 续签",
+      "version": "1.1.164",
+      "architecture": "iphoneos-arm64e",
+      "section": "TrollStore",
+      "env": "TrollStore",
+      "summary": "使用 苹果 ID 续签 IPA",
+      "description": "* 仅支持 iOS 17 Relaxin 越狱\n* 解决非巨魔设备签名 Relaxin IPA 问题\n* Re-signing tool for iOS jailbreak",
+      "maintainer": "AmorCool <admin@reprovision.dev>",
+      "author": "Coolapk@Analytics",
+      "depends": [
+        "firmware (>= 15.0)",
+        "zip",
+        "unzip"
+      ],
+      "filename": "debs/jp.soh.reprovisions_1.1.164_iphoneos-arm64e.deb",
+      "size": 6259978,
+      "size_label": "6.0 MB",
+      "sha256": "4d8362e326ae69d7c1ca7f7069e7133182d6f0b12477e93cfb7fd6ad59427d28",
+      "homepage": "",
+      "changelog": "depictions/changelogs/jp.soh.reprovisions.md"
     },
     {
       "package": "com.nicksworks.roadrunnerreborn",
@@ -64,6 +134,28 @@
       "sha256": "629c0d51f97bc6a8bc8d7066fcdf8a44f7460a7e0e6de897b4c7126ec66ed74b",
       "homepage": "https://github.com/hadobedo/RoadRunnerReborn",
       "changelog": "depictions/changelogs/com.nicksworks.roadrunnerreborn.md"
+    },
+    {
+      "package": "com.iosdump.tslite",
+      "slug": "com.iosdump.tslite",
+      "name": "TSLite(RootHide)",
+      "version": "2.1.1-2",
+      "architecture": "iphoneos-arm64e",
+      "section": "TrollStore",
+      "env": "TrollStore",
+      "summary": "越狱专用的APP安装器，iosdump修改版TrollStoreLite，功能多多(程序改名、换图标、解密、降级等)；同步最新代码v2.1.1-2：修复内置 ldid 生成的签名可执行段信息。",
+      "description": "",
+      "maintainer": "opa334",
+      "author": "opa334",
+      "depends": [
+        "ldid"
+      ],
+      "filename": "debs/com.iosdump.tslite_2.1.1-2_iphoneos-arm64e.deb",
+      "size": 3679176,
+      "size_label": "3.5 MB",
+      "sha256": "23426e9bb86ee0ad8b6df796621844139e08785a9511b2a4675ba9561e352786",
+      "homepage": "",
+      "changelog": "depictions/changelogs/com.iosdump.tslite.md"
     },
     {
       "package": "com.mallin.tunnelsharevpn",
