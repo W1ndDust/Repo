@@ -40,15 +40,15 @@ Description: 1. 自动获取永久授权
 Package: com.wcplugins.tweak.roothide
 Name: WCPlugins（隐根）
 Version: 2.1
-Architecture: iphoneos-arm
+Architecture: iphoneos-arm64
 Section: RootHide
 Maintainer: WCPlugins
 Author: WCPlugins
 Depends: firmware (>= 11.0)
-Filename: ./debs/com.wcplugins.tweak.roothide_2.1_iphoneos-arm.deb
+Filename: ./debs/com.wcplugins.tweak.roothide_2.1_iphoneos-arm64.deb
 Size: 113108
-MD5sum: dc0d2ffbfe5703dd796d8c33e43b813b
-SHA1: a996a3d91c4de5d3d0097843190a3edbfdae5b6e
-SHA256: 9d489758af071eb5127d5ec08868098d11fe2b70baf3ab135d2ea238434cb626
+MD5sum: feba08a8a48575456700ff158658fe20
+SHA1: 9bdf22d5c750439230ec7db8c0b26ffe31a55048
+SHA256: a8b52573f38f8da197e499d4a5c04c5b03113f65de8065ed8d2bc00d2c9a9673
 SileoDepiction: https://w1nddust.github.io/Repo/depictions/com.wcplugins.tweak.roothide.json
 Description: 微信插件管理：外观自定义、拖动排序、显隐与重命名。
