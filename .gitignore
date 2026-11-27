@@ -1,0 +1,4 @@
+.DS_Store
+build/**/out/
+build/**/out2/
+*.tmp

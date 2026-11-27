@@ -1,0 +1,53 @@
+{
+  "repo": {
+    "origin": "DustDrift-Repo",
+    "label": "DustDrift-Repo",
+    "description": "DustDrift 个人插件源 · Sileo / Zebra / Irisin",
+    "suite": "stable",
+    "codename": "ios",
+    "version": "1.0",
+    "architectures": [
+      "iphoneos-arm64",
+      "iphoneos-arm"
+    ],
+    "base_url": "https://w1nddust.github.io/Repo/",
+    "icon": "CydiaIcon.png",
+    "sections": [
+      "RootLess",
+      "RootHide"
+    ],
+    "default_section": "RootLess"
+  },
+  "sections": [
+    "RootLess",
+    "RootHide"
+  ],
+  "packages": [
+    {
+      "package": "com.dustdrift.demo.rootless",
+      "name": "DustDriftDemoRootLess",
+      "version": "1.0.0",
+      "arch": "iphoneos-arm64",
+      "section": "RootLess",
+      "author": "local",
+      "description": "DustDriftDemoRootLess — built with ios-toolchain on Minis",
+      "size": 2708,
+      "file": "com.dustdrift.demo.rootless_1.0.0_iphoneos-arm64.deb",
+      "filename": "./debs/com.dustdrift.demo.rootless_1.0.0_iphoneos-arm64.deb",
+      "depiction": ""
+    },
+    {
+      "package": "com.dustdrift.demo.roothide",
+      "name": "DustDriftDemoRootHide",
+      "version": "1.0.0",
+      "arch": "iphoneos-arm64",
+      "section": "RootHide",
+      "author": "local",
+      "description": "DustDriftDemoRootHide — built with ios-toolchain on Minis",
+      "size": 2700,
+      "file": "com.dustdrift.demo.roothide_1.0.0_iphoneos-arm64.deb",
+      "filename": "./debs/com.dustdrift.demo.roothide_1.0.0_iphoneos-arm64.deb",
+      "depiction": ""
+    }
+  ]
+}
