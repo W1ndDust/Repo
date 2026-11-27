@@ -116,10 +116,11 @@ def main():
         lines.append(f"MD5sum: {h['MD5sum']}")
         lines.append(f"SHA1: {h['SHA1']}")
         lines.append(f"SHA256: {h['SHA256']}")
-        has_dep = (ROOT / "depictions" / f"{c['Package']}.html").exists()
-        depiction = f"{CFG['base_url']}depictions/{c['Package']}.html"
+        # SileoDepiction：Sileo 读取小写 key `sileodepiction`（PackageListManager.swift:160）
+        dep_json = ROOT / "depictions" / f"{c['Package']}.json"
+        has_dep = dep_json.exists()
+        depiction = f"{CFG['base_url']}depictions/{c['Package']}.json"
         if has_dep:
-            lines.append(f"Depiction: {depiction}")
             lines.append(f"SileoDepiction: {depiction}")
         if c.get("Description"):
             lines.append(f"Description: {c['Description']}")

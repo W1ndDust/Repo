@@ -12,6 +12,7 @@ Size: 573476
 MD5sum: ace9c0aba59547120a6af91352618135
 SHA1: 03cee9a6b39b5a6f83daa06d81658ea045cde40c
 SHA256: 9aaa99482f16619296a9986f5520720e350eaffda49491f76e21dfb035ced17a
+SileoDepiction: https://w1nddust.github.io/Repo/depictions/com.mallin.tunnelsharevpn.json
 Description: 1. 自动获取永久授权
  3. 功能1：实现本手机的科学上网功能直接通过热点形式分享给其他设备；
  4. 功能2：☆支持热点连接Wi-Fi时流量走Wi-Fi，而不是手机的“蜂窝网络”☆；
@@ -19,3 +20,35 @@ Description: 1. 自动获取永久授权
  6. 在“设置-控制中心”添加快捷键，即可实现一键操作或者手动模式进行分享；
  7. 本插件只限用于学术科研与查阅外网资料！
  8. 作者QQ：523635737 好用请支持正版
+
+Package: com.wcplugins.tweak
+Name: WCPlugins
+Version: 2.1
+Architecture: iphoneos-arm64
+Section: RootLess
+Maintainer: WCPlugins
+Author: WCPlugins
+Depends: firmware (>= 11.0)
+Filename: ./debs/com.wcplugins.tweak_2.1_iphoneos-arm64.deb
+Size: 113120
+MD5sum: 9ec9e96c8425f607a9aafa253bcc4d4b
+SHA1: 9159ea6e90cf000944a9f02ec43692bdc5617fc7
+SHA256: 2e2dc7842a20b27e05517e9aead7dd7a606660c08faf3a6df20732d9deb666df
+SileoDepiction: https://w1nddust.github.io/Repo/depictions/com.wcplugins.tweak.json
+Description: 微信插件管理：外观自定义、拖动排序、显隐与重命名。
+
+Package: com.wcplugins.tweak.roothide
+Name: WCPlugins（隐根）
+Version: 2.1
+Architecture: iphoneos-arm
+Section: RootHide
+Maintainer: WCPlugins
+Author: WCPlugins
+Depends: firmware (>= 11.0)
+Filename: ./debs/com.wcplugins.tweak.roothide_2.1_iphoneos-arm.deb
+Size: 113108
+MD5sum: dc0d2ffbfe5703dd796d8c33e43b813b
+SHA1: a996a3d91c4de5d3d0097843190a3edbfdae5b6e
+SHA256: 9d489758af071eb5127d5ec08868098d11fe2b70baf3ab135d2ea238434cb626
+SileoDepiction: https://w1nddust.github.io/Repo/depictions/com.wcplugins.tweak.roothide.json
+Description: 微信插件管理：外观自定义、拖动排序、显隐与重命名。
