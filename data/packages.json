@@ -11,15 +11,62 @@
     ]
   },
   "stats": {
-    "total": 10,
+    "total": 14,
     "by_section": {
       "RootLess": 1,
-      "RootHide": 3,
+      "RootHide": 7,
       "System": 2,
       "TrollStore": 4
     }
   },
   "packages": [
+    {
+      "package": "com.mlgm.airdropx",
+      "slug": "com.mlgm.airdropx",
+      "name": "AirDropX",
+      "version": "1.0.2",
+      "architecture": "iphoneos-arm64",
+      "section": "RootHide",
+      "env": "RootHide",
+      "summary": "为控制中心「隔空投送」新增「所有人（无限制）」模式，并向 Actra 提供四种接收模式动作。",
+      "description": "",
+      "maintainer": "mlgm",
+      "author": "mlgm",
+      "depends": [
+        "firmware (>= 16.2)",
+        "mobilesubstrate"
+      ],
+      "filename": "debs/com.mlgm.airdropx_1.0.2_iphoneos-arm64.deb",
+      "size": 67848,
+      "size_label": "66 KB",
+      "sha256": "c364d2d9be1e15a4f68b41daebced6d939dff241eb8516739ea7927052bedef4",
+      "homepage": "",
+      "changelog": "depictions/changelogs/com.mlgm.airdropx.md"
+    },
+    {
+      "package": "com.iosdump.appdata",
+      "slug": "com.iosdump.appdata",
+      "name": "AppData软件增强-RootHide",
+      "version": "2.7.5",
+      "architecture": "iphoneos-arm64",
+      "section": "RootHide",
+      "env": "RootHide",
+      "summary": "降级应用",
+      "description": "- 修改应用名称\n- 清除/重置应用数据\n- 重置应用权限\n- 快速跳转Filza应用路径\n- 新增可选新文件管理器Fila用来面板跳转\n- 源内所有插件仅供本人学习交流使用,下载后请于24小时内删除!",
+      "maintainer": "iosdump",
+      "author": "iosdump",
+      "depends": [
+        "firmware (>= 11.0)",
+        "mobilesubstrate",
+        "preferenceloader"
+      ],
+      "filename": "debs/com.iosdump.appdata_2.7.5_iphoneos-arm64.deb",
+      "size": 1722920,
+      "size_label": "1.6 MB",
+      "sha256": "db8fe3998b09806ce73e0b6007eaa1c548e84406e6ed98abc826f33c74ef1973",
+      "homepage": "",
+      "changelog": "depictions/changelogs/com.iosdump.appdata.md"
+    },
     {
       "package": "ai.akemi.appsyncunified",
       "slug": "ai.akemi.appsyncunified",
@@ -85,6 +132,32 @@
       "sha256": "cb68b669ce9f8fd79f0faf327c8b7d5d609824df9506285dcd10da4c621dcc8a",
       "homepage": "",
       "changelog": "depictions/changelogs/cn.zqbb.jailfools.md"
+    },
+    {
+      "package": "com.82flex.noredirect",
+      "slug": "com.82flex.noredirect",
+      "name": "No Redirect",
+      "version": "2.1",
+      "architecture": "iphoneos-arm64",
+      "section": "RootHide",
+      "env": "RootHide",
+      "summary": "Stop specified apps from redirecting to App Store, Safari or other apps.",
+      "description": "",
+      "maintainer": "Lessica <82flex@gmail.com>",
+      "author": "Lessica <82flex@gmail.com>",
+      "depends": [
+        "firmware (>= 14.0)",
+        "mobilesubstrate",
+        "preferenceloader",
+        "com.opa334.altlist",
+        "com.opa334.libsandy"
+      ],
+      "filename": "debs/com.82flex.noredirect_2.1_iphoneos-arm64.deb",
+      "size": 91264,
+      "size_label": "89 KB",
+      "sha256": "de17ffbecb3cc9d2e6a6733604a867f697f06fd5dbed43da0e0a2e3b878a7d54",
+      "homepage": "",
+      "changelog": "depictions/changelogs/com.82flex.noredirect.md"
     },
     {
       "package": "jp.soh.reprovisions",
@@ -181,6 +254,32 @@
       "sha256": "e580eaddd8c3b1dc06a3b8d9405929a11462d6dc3bc23b12efd2e261696d7e84",
       "homepage": "",
       "changelog": "depictions/changelogs/com.mallin.tunnelsharevpn.md"
+    },
+    {
+      "package": "iya.banana.vehiclemotioncues",
+      "slug": "iya.banana.vehiclemotioncues",
+      "name": "Vehicle Motion Cues",
+      "version": "0.0.2",
+      "architecture": "iphoneos-arm64",
+      "section": "RootHide",
+      "env": "RootHide",
+      "summary": "Reverse-derived Vehicle Motion Cues for iOS 17.",
+      "description": "",
+      "maintainer": "hades",
+      "author": "hades",
+      "depends": [
+        "firmware (>= 15.0)",
+        "firmware (<< 18.0)",
+        "mobilesubstrate",
+        "preferenceloader",
+        "com.opa334.ccsupport (>= 1.3.10)"
+      ],
+      "filename": "debs/iya.banana.vehiclemotioncues_0.0.2_iphoneos-arm64.deb",
+      "size": 32942,
+      "size_label": "32 KB",
+      "sha256": "394135698c847ebadff342c1fcb5580f7b539ce7343f2bcd26fc7577e0ccb8a0",
+      "homepage": "",
+      "changelog": "depictions/changelogs/iya.banana.vehiclemotioncues.md"
     },
     {
       "package": "com.wcplugins.tweak",

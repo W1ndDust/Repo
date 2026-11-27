@@ -1,0 +1,27 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "tabname": "详情",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- 修改应用名称\n\n- 清除/重置应用数据\n- 重置应用权限\n- 快速跳转Filza应用路径\n- 新增可选新文件管理器Fila用来面板跳转\n- 源内所有插件仅供本人学习交流使用,下载后请于24小时内删除!",
+          "useSpacing": true
+        }
+      ]
+    },
+    {
+      "tabname": "更新日志",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "暂无更新日志。",
+          "useSpacing": true
+        }
+      ]
+    }
+  ]
+}

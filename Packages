@@ -14,6 +14,64 @@ SHA256: 2e2dc7842a20b27e05517e9aead7dd7a606660c08faf3a6df20732d9deb666df
 SileoDepiction: https://w1nddust.github.io/Repo/depictions/com.wcplugins.tweak.json
 Description: 微信插件管理：外观自定义、拖动排序、显隐与重命名。
 
+Package: com.mlgm.airdropx
+Name: AirDropX
+Version: 1.0.2
+Architecture: iphoneos-arm64
+Section: RootHide
+Maintainer: mlgm
+Author: mlgm
+Depends: firmware (>= 16.2), mobilesubstrate
+Filename: ./debs/com.mlgm.airdropx_1.0.2_iphoneos-arm64.deb
+Size: 67848
+Installed-Size: 292
+MD5sum: 4e43aa66558af44c7edd766313eb3ebd
+SHA1: 4a04b77b6a073a96c1adca1bff6d6ea8c598b2fa
+SHA256: c364d2d9be1e15a4f68b41daebced6d939dff241eb8516739ea7927052bedef4
+SileoDepiction: https://w1nddust.github.io/Repo/depictions/com.mlgm.airdropx.json
+Description: 为控制中心「隔空投送」新增「所有人（无限制）」模式，并向 Actra 提供四种接收模式动作。
+
+Package: com.iosdump.appdata
+Name: AppData软件增强-RootHide
+Version: 2.7.5
+Architecture: iphoneos-arm64
+Section: RootHide
+Maintainer: iosdump
+Author: iosdump
+Depends: firmware (>= 11.0), mobilesubstrate, preferenceloader
+Conflicts: com.netskao.appdatas, com.netskao.appdata, cn.zqbb.appdata, com.fouadraheb.appdata, com.iosdump.appdata
+Replaces: com.iosdump.appdata
+Filename: ./debs/com.iosdump.appdata_2.7.5_iphoneos-arm64.deb
+Size: 1722920
+MD5sum: 752d59b5b893dd2a11d35850bf65378a
+SHA1: 444351c3772d805b5e3b1162c923d1d6a1d68d8c
+SHA256: db8fe3998b09806ce73e0b6007eaa1c548e84406e6ed98abc826f33c74ef1973
+SileoDepiction: https://w1nddust.github.io/Repo/depictions/com.iosdump.appdata.json
+Description: 降级应用
+ - 修改应用名称
+ - 清除/重置应用数据
+ - 重置应用权限
+ - 快速跳转Filza应用路径
+ - 新增可选新文件管理器Fila用来面板跳转
+ - 源内所有插件仅供本人学习交流使用,下载后请于24小时内删除!
+
+Package: com.82flex.noredirect
+Name: No Redirect
+Version: 2.1
+Architecture: iphoneos-arm64
+Section: RootHide
+Maintainer: Lessica <82flex@gmail.com>
+Author: Lessica <82flex@gmail.com>
+Depends: firmware (>= 14.0), mobilesubstrate, preferenceloader, com.opa334.altlist, com.opa334.libsandy
+Filename: ./debs/com.82flex.noredirect_2.1_iphoneos-arm64.deb
+Size: 91264
+Installed-Size: 832
+MD5sum: 4e1ce80365e20d21f777d6bccf0e607b
+SHA1: 703e21dd725a829e7576db11150ad77bbb9512d5
+SHA256: de17ffbecb3cc9d2e6a6733604a867f697f06fd5dbed43da0e0a2e3b878a7d54
+SileoDepiction: https://w1nddust.github.io/Repo/depictions/com.82flex.noredirect.json
+Description: Stop specified apps from redirecting to App Store, Safari or other apps.
+
 Package: com.nicksworks.roadrunnerreborn
 Name: RoadRunner Reborn
 Version: 1.2.1
@@ -56,6 +114,23 @@ Description: 1. 自动获取永久授权
  6. 在“设置-控制中心”添加快捷键，即可实现一键操作或者手动模式进行分享；
  7. 本插件只限用于学术科研与查阅外网资料！
  8. 作者QQ：523635737 好用请支持正版
+
+Package: iya.banana.vehiclemotioncues
+Name: Vehicle Motion Cues
+Version: 0.0.2
+Architecture: iphoneos-arm64
+Section: RootHide
+Maintainer: hades
+Author: hades
+Depends: firmware (>= 15.0), firmware (<< 18.0), mobilesubstrate, preferenceloader, com.opa334.ccsupport (>= 1.3.10)
+Filename: ./debs/iya.banana.vehiclemotioncues_0.0.2_iphoneos-arm64.deb
+Size: 32942
+Installed-Size: 616
+MD5sum: fae00c3592e1ab94cd11bef1e11ab258
+SHA1: a46e32d406fd54519c1581717a7b0cb81844379d
+SHA256: 394135698c847ebadff342c1fcb5580f7b539ce7343f2bcd26fc7577e0ccb8a0
+SileoDepiction: https://w1nddust.github.io/Repo/depictions/iya.banana.vehiclemotioncues.json
+Description: Reverse-derived Vehicle Motion Cues for iOS 17.
 
 Package: com.wcplugins.tweak.roothide
 Name: WCPlugins（隐根）
