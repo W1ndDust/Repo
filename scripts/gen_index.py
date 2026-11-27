@@ -142,8 +142,10 @@ def main():
 
     pkg_text = "\n".join(stanzas)
     (ROOT / "Packages").write_text(pkg_text, encoding="utf-8")
-    with gzip.open(ROOT / "Packages.gz", "wb") as f:
-        f.write(pkg_text.encode("utf-8"))
+    with open(ROOT / "Packages.gz", "wb") as fh:
+        # mtime=0 → 输出确定，内容不变时不会产生无意义的 commit
+        with gzip.GzipFile(fileobj=fh, mode="wb", mtime=0) as f:
+            f.write(pkg_text.encode("utf-8"))
 
     release = "\n".join([
         f"Origin: {CFG['origin']}",
