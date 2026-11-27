@@ -14,7 +14,8 @@
   "sections": [
     "RootLess",
     "RootHide",
-    "System"
+    "System",
+    "TrollStore"
   ],
   "default_section": "RootLess"
 }

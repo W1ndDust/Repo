@@ -1,4 +1,6 @@
 {
   "com.wcplugins.tweak": "RootLess",
-  "com.wcplugins.tweak.roothide": "RootHide"
+  "com.wcplugins.tweak.roothide": "RootHide",
+  "org.coolstar.libhooker": "System",
+  "ellekit": "System"
 }

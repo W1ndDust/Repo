@@ -63,6 +63,10 @@ def install_layout(deb: Path) -> str:
         if p.startswith("./"):
             p = p[2:]
         paths.append(p)
+    # TrollStore 打包的应用：装到 /var/containers/Bundle/Application 或含 .app 包
+    has_app = any(p.startswith("var/containers/Bundle/Application/") or ".app/" in p for p in paths)
+    if has_app and not any("MobileSubstrate/DynamicLibraries/" in p for p in paths):
+        return "trollstore"
     # 系统级包：守护进程 / 命令行工具，且不是 MobileSubstrate 插件
     has_daemon = any("/LaunchDaemons/" in p or "/LaunchAgents/" in p for p in paths)
     has_tool = any(p.startswith(("usr/bin/", "usr/sbin/", "usr/libexec/")) for p in paths)
@@ -86,6 +90,8 @@ def classify(deb: Path, c: dict) -> str:
 
     # 1) 安装路径最可信
     layout = install_layout(deb)
+    if layout == "trollstore":
+        return "TrollStore" if "TrollStore" in SECTIONS else DEFAULT_SECTION
     if layout == "system":
         return "System" if "System" in SECTIONS else DEFAULT_SECTION
     if layout == "rootless":

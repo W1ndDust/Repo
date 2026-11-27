@@ -89,7 +89,7 @@ def shell(title: str, desc: str, body: str, root: str, page: str, data: dict, v:
 
 
 def row(p: dict, root: str, index=None) -> str:
-    tag_class = {"RootHide": "rh", "System": "sys"}.get(p["section"], "rl")
+    tag_class = {"RootHide": "rh", "System": "sys", "TrollStore": "ts"}.get(p["section"], "rl")
     num = f'<span class="row__num" aria-hidden="true">{index:02d}</span>' if index else ""
     return (
         f'<li class="row{" row--num" if index else ""}" data-section="{esc(p["section"])}" data-name="{esc(p["name"])}" '
@@ -120,7 +120,8 @@ def build_home(data: dict, featured: list[dict], root: str) -> str:
     SEC_DESC = {
         "RootLess": "安装到 /var/jb/…，用于无根越狱",
         "RootHide": "安装到 /Library/…，用于隐根环境",
-        "System": "守护进程与系统级工具",
+        "System": "注入器与系统级组件",
+        "TrollStore": "TrollStore 环境的应用",
     }
     stats = f'<div class="stat"><span class="stat__n">{data["stats"]["total"]}</span><span class="stat__l">插件总数</span></div>'
     for sec in data["repo"]["sections"]:
@@ -130,7 +131,7 @@ def build_home(data: dict, featured: list[dict], root: str) -> str:
     env_cards = ""
     for sec in data["repo"]["sections"]:
         n = data["stats"]["by_section"].get(sec, 0)
-        cls = {"RootHide": "rh", "System": "sys"}.get(sec, "rl")
+        cls = {"RootHide": "rh", "System": "sys", "TrollStore": "ts"}.get(sec, "rl")
         env_cards += (
             f'<a class="envcard" href="{root}packages/#{esc(sec)}">'
             f'<span class="tag tag--{cls}">{esc(sec)}</span>'
@@ -164,7 +165,7 @@ def build_catalog(data: dict, root: str) -> str:
 
 def build_detail(data: dict, p: dict, root: str) -> str:
     initial = esc(p["name"][0].upper())
-    tag_class = {"RootHide": "rh", "System": "sys"}.get(p["section"], "rl")
+    tag_class = {"RootHide": "rh", "System": "sys", "TrollStore": "ts"}.get(p["section"], "rl")
     maintainer = (f'<div><dt>维护者</dt><dd>{esc(p["maintainer"])}</dd></div>'
                   if p["maintainer"] else "")
     depends = ""
@@ -229,7 +230,7 @@ def build_add(data: dict, root: str) -> str:
 
 def build_about(data: dict, root: str) -> str:
     sec_rows = "".join(
-        f'<div><dt>{esc(sec)}</dt><dd>{esc({"RootLess": "无根越狱", "RootHide": "隐根环境", "System": "系统级组件"}.get(sec, sec))}</dd></div>'
+        f'<div><dt>{esc(sec)}</dt><dd>{esc({"RootLess": "无根越狱", "RootHide": "隐根环境", "System": "系统级组件", "TrollStore": "TrollStore 环境"}.get(sec, sec))}</dd></div>'
         for sec in data["repo"]["sections"]
     )
     body = render("about.html", root=root, sec_rows=sec_rows, repo_url=esc(data["repo"]["url"]),

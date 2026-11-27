@@ -72,3 +72,41 @@ SHA1: 9bdf22d5c750439230ec7db8c0b26ffe31a55048
 SHA256: a8b52573f38f8da197e499d4a5c04c5b03113f65de8065ed8d2bc00d2c9a9673
 SileoDepiction: https://w1nddust.github.io/Repo/depictions/com.wcplugins.tweak.roothide.json
 Description: 微信插件管理：外观自定义、拖动排序、显隐与重命名。
+
+Package: ellekit
+Name: ElleKit
+Version: 1.2-3+deadlockfix1
+Architecture: iphoneos-arm64
+Section: System
+Priority: optional
+Maintainer: Dhinak G <dhinak@dhinak.net>
+Author: Evelyn
+Conflicts: com.ex.substitute, org.coolstar.libhooker, science.xnu.substitute, mobilesubstrate, com.saurik.substrate.safemode
+Replaces: com.ex.libsubstitute, org.coolstar.libhooker, mobilesubstrate
+Provides: mobilesubstrate (= 99), org.coolstar.libhooker (= 1.6.9)
+Filename: ./debs/ellekit_1.2-3+deadlockfix1_iphoneos-arm64.deb
+Size: 127100
+MD5sum: 7e36b8804d2047c73512397b30109eab
+SHA1: 4155030004a52491507c4db45dc6034796bc5a04
+SHA256: c3d07cadb6e2e18169b491a204343ae5410ca3979e92583b671ee2f0ec07cd79
+Description: ElleKit tweak injection libraries and loader
+
+Package: org.coolstar.libhooker
+Name: libhooker (roothide port)
+Version: 1.6.9-22+roothide
+Architecture: iphoneos-arm64
+Section: System
+Priority: optional
+Maintainer: libhooker roothide port contributors
+Author: CoolStar and contributors
+Depends: firmware (>= 16.0), firmware (<< 18.0), roothide
+Conflicts: ellekit, mobilesubstrate, com.ex.substitute, science.xnu.substitute, com.saurik.substrate.safemode
+Replaces: ellekit, mobilesubstrate, com.ex.libsubstitute
+Provides: ellekit (= 1.2-3), mobilesubstrate (= 99)
+Filename: ./debs/org.coolstar.libhooker_1.6.9-22+roothide_iphoneos-arm64.deb
+Size: 48474
+Installed-Size: 580
+MD5sum: e078d380d0f7be74afc9a4eb034f6255
+SHA1: d0d936f5d07c1b1dfa9b256dd805ba329c1521ed
+SHA256: 7399a07a516475ebb002fb36a2485279e784bd68ce690b361cdfe91e34701ca9
+Description: libhooker engine, tweak loader and safe mode for iOS 16+ roothide
