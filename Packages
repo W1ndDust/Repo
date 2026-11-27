@@ -89,6 +89,7 @@ Size: 127100
 MD5sum: 7e36b8804d2047c73512397b30109eab
 SHA1: 4155030004a52491507c4db45dc6034796bc5a04
 SHA256: c3d07cadb6e2e18169b491a204343ae5410ca3979e92583b671ee2f0ec07cd79
+SileoDepiction: https://w1nddust.github.io/Repo/depictions/ellekit.json
 Description: ElleKit tweak injection libraries and loader
 
 Package: org.coolstar.libhooker
@@ -109,4 +110,5 @@ Installed-Size: 580
 MD5sum: e078d380d0f7be74afc9a4eb034f6255
 SHA1: d0d936f5d07c1b1dfa9b256dd805ba329c1521ed
 SHA256: 7399a07a516475ebb002fb36a2485279e784bd68ce690b361cdfe91e34701ca9
+SileoDepiction: https://w1nddust.github.io/Repo/depictions/org.coolstar.libhooker.json
 Description: libhooker engine, tweak loader and safe mode for iOS 16+ roothide
