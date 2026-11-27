@@ -91,8 +91,8 @@
       if (clearAll) clearAll.hidden = none;
     }
     if (clearBtn) clearBtn.hidden = !(q && q.value);
-    var title = document.querySelector(".pagehead__meta");
-    if (title) title.textContent = shown + " / " + rows.length + " 个插件 · 数据来自 APT 索引";
+    var meta = document.querySelector(".pagehead__meta");
+    if (meta) meta.textContent = shown + " / " + rows.length + " 个插件";
   }
 
   function sortRows(key) {
