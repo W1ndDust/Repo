@@ -17,17 +17,17 @@ Description: 微信插件管理：外观自定义、拖动排序、显隐与重�
 Package: com.mallin.tunnelsharevpn
 Name: TunnelShareVPN
 Version: 2.2.0-6
-Architecture: iphoneos-arm64e
+Architecture: iphoneos-arm64
 Section: RootHide
 Maintainer: Mallin
 Author: Mallin
 Depends: firmware (>= 15.0), mobilesubstrate | substitute | libhooker | ellekit, com.opa334.ccsupport, preferenceloader
 Pre-Depends: rootless-compat (>= 0.9)
-Filename: ./debs/com.mallin.tunnelsharevpn_2.2.0-6_iphoneos-arm64e.deb
-Size: 573476
-MD5sum: ace9c0aba59547120a6af91352618135
-SHA1: 03cee9a6b39b5a6f83daa06d81658ea045cde40c
-SHA256: 9aaa99482f16619296a9986f5520720e350eaffda49491f76e21dfb035ced17a
+Filename: ./debs/com.mallin.tunnelsharevpn_2.2.0-6_iphoneos-arm64.deb
+Size: 573474
+MD5sum: 33fe512c4ccdf3603bf9648f0b566368
+SHA1: 322e2e6fc8f879ad76c0e4d9f1155bb082efc27e
+SHA256: e580eaddd8c3b1dc06a3b8d9405929a11462d6dc3bc23b12efd2e261696d7e84
 SileoDepiction: https://w1nddust.github.io/Repo/depictions/com.mallin.tunnelsharevpn.json
 Description: 1. 自动获取永久授权
  3. 功能1：实现本手机的科学上网功能直接通过热点形式分享给其他设备；
