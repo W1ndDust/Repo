@@ -161,10 +161,7 @@ def main():
     ]) + "\n"
     (ROOT / "Release").write_text(release, encoding="utf-8")
 
-    (ROOT / "packages.json").write_text(
-        json.dumps({"repo": CFG, "sections": SECTIONS, "packages": web},
-                   ensure_ascii=False, indent=2),
-        encoding="utf-8")
+    # 网页数据由 web/build.py 直接从 Packages 生成，这里不再另写一份
     counts = {s: sum(1 for p in web if p["section"] == s) for s in SECTIONS}
     print("\n✅ 索引已生成：" + "，".join(f"{s} {n} 个" for s, n in counts.items()))
 

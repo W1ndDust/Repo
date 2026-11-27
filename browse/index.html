@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>软件包 · DustDrift-Repo</title>
+<meta name="description" content="DustDrift-Repo 的全部软件包，可按名称搜索、按 RootLess / RootHide 分组筛选。">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F6F7F9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#12151A" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../CydiaIcon.png">
+<link rel="stylesheet" href="../assets/style.css?v=c1c80d2a">
+<script>(function(){try{var t=localStorage.getItem("dd-theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}})();</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<header class="top">
+  <div class="top__wrap">
+    <a class="brand" href="../" aria-label="返回首页 · DustDrift-Repo">
+      <img src="../CydiaIcon.png" alt="" width="26" height="26">
+    </a>
+    <button class="menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav">菜单</button>
+    <nav class="nav" id="nav" aria-label="主导航">
+      <a href="../">首页</a>
+      <a href="../browse/" aria-current="page">软件包</a>
+      <a href="../add/">添加源</a>
+    </nav>
+    <button class="theme" id="themeBtn" type="button" aria-label="切换外观：跟随系统">◐</button>
+  </div>
+</header>
+
+<main id="main">
+<div class="page-head">
+  <h1>软件包</h1>
+  <p class="page-head__meta" id="resultCount">2 个</p>
+</div>
+
+<div class="tools">
+  <label class="search" for="q">
+    <span class="search__icon" aria-hidden="true"><svg viewBox="0 0 20 20" focusable="false"><circle cx="9" cy="9" r="6"></circle><path d="M13.5 13.5 17 17"></path></svg></span>
+    <input id="q" type="search" name="q" placeholder="搜索名称、标识符或描述" autocomplete="off" enterkeyhint="search">
+    <button class="search__clear" type="button" hidden aria-label="清除搜索">✕</button>
+  </label>
+
+  <div class="seg" role="tablist" aria-label="按越狱环境筛选">
+    <button role="tab" type="button" data-section="" aria-selected="true">全部</button>
+<button role="tab" type="button" data-section="RootLess" aria-selected="false">RootLess <span aria-hidden="true">1</span></button><button role="tab" type="button" data-section="RootHide" aria-selected="false">RootHide <span aria-hidden="true">1</span></button>
+  </div>
+
+  <label class="sort">
+    <span>排序</span>
+    <select id="sort">
+      <option value="name">名称</option>
+      <option value="version">版本</option>
+    </select>
+  </label>
+</div>
+
+<ul class="rows rows--full" id="list">
+<li data-section="RootLess" data-name="DustDriftDemoRootLess" data-version="1.0.0" data-search="dustdriftdemorootless com.dustdrift.demo.rootless dustdriftdemorootless — built with ios-toolchain on minis rootless"><a class="row" href="../p/com.dustdrift.demo.rootless/"><span class="row__mark" aria-hidden="true">D</span><span class="row__body"><span class="row__name">DustDriftDemoRootLess</span><span class="row__id">com.dustdrift.demo.rootless</span><span class="row__desc">DustDriftDemoRootLess — built with ios-toolchain on Minis</span><span class="row__meta">rootless · v1.0.0 · 3 KB</span></span></a></li><li data-section="RootHide" data-name="DustDriftDemoRootHide" data-version="1.0.0" data-search="dustdriftdemoroothide com.dustdrift.demo.roothide dustdriftdemoroothide — built with ios-toolchain on minis roothide"><a class="row" href="../p/com.dustdrift.demo.roothide/"><span class="row__mark" aria-hidden="true">D</span><span class="row__body"><span class="row__name">DustDriftDemoRootHide<span class="tag">RootHide</span></span><span class="row__id">com.dustdrift.demo.roothide</span><span class="row__desc">DustDriftDemoRootHide — built with ios-toolchain on Minis</span><span class="row__meta">rootless · v1.0.0 · 3 KB</span></span></a></li>
+</ul>
+
+<div class="empty" id="empty" hidden>
+  <p>没有匹配的软件包</p>
+  <button class="btn btn--quiet" type="button" id="clearAll">清除筛选</button>
+</div>
+
+<div class="skeleton" id="skeleton" hidden aria-hidden="true">
+  <div></div><div></div><div></div>
+</div>
+
+</main>
+
+<footer class="foot">
+  <p>数据来自本源的 APT <code>Packages</code> 索引，由构建脚本生成。</p>
+  <p class="foot__meta">DustDrift-Repo · 2 个软件包</p>
+</footer>
+
+<script src="../assets/app.js?v=c1c80d2a" defer></script>
+</body>
+</html>

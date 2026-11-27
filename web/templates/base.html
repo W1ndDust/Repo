@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{title}}</title>
+<meta name="description" content="{{desc}}">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F6F7F9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#12151A" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="{{root}}CydiaIcon.png">
+<link rel="stylesheet" href="{{root}}assets/style.css?v={{asset_v}}">
+<script>(function(){try{var t=localStorage.getItem("dd-theme");if(t&&t!=="auto")document.documentElement.dataset.theme=t}catch(e){}})();</script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<header class="top">
+  <div class="top__wrap">
+    <a class="brand" href="{{root}}" aria-label="返回首页 · {{label}}">
+      <img src="{{root}}CydiaIcon.png" alt="" width="26" height="26">
+    </a>
+    <button class="menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav">菜单</button>
+    <nav class="nav" id="nav" aria-label="主导航">
+      <a href="{{root}}"{{nav_home}}>首页</a>
+      <a href="{{root}}browse/"{{nav_browse}}>软件包</a>
+      <a href="{{root}}add/"{{nav_add}}>添加源</a>
+    </nav>
+    <button class="theme" id="themeBtn" type="button" aria-label="切换外观：跟随系统">◐</button>
+  </div>
+</header>
+
+<main id="main">
+{{body}}
+</main>
+
+<footer class="foot">
+  <p>数据来自本源的 APT <code>Packages</code> 索引，由构建脚本生成。</p>
+  <p class="foot__meta">{{label}} · {{package_count}} 个软件包{{foot_extra}}</p>
+</footer>
+
+<script src="{{root}}assets/app.js?v={{asset_v}}" defer></script>
+</body>
+</html>

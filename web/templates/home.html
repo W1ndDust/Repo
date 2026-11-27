@@ -1,0 +1,36 @@
+<section class="lede">
+  <h1>{{label}}</h1>
+  <p class="lede__sub">{{description}}</p>
+</section>
+
+<section class="copy" aria-labelledby="addr-h">
+  <h2 id="addr-h" class="vh">软件源地址</h2>
+  <p class="copy__addr" id="addr">{{source_url}}</p>
+  <button class="btn btn--primary" type="button" data-copy="{{source_url}}">复制源地址</button>
+  <p class="copy__hint">地址结尾的 <code>/</code> 不要省略</p>
+</section>
+
+<section class="status" aria-label="源概况">
+  <p class="status__line">
+    <span><b>{{package_count}}</b> 个软件包</span>
+    {{section_counts}}
+  </p>
+</section>
+
+{{section_list}}
+
+<section class="block" aria-labelledby="all-h">
+  <div class="block__head">
+    <h2 id="all-h">全部软件包</h2>
+    <a class="more" href="{{root}}browse/">浏览<span class="more__n">{{package_count}}</span></a>
+  </div>
+  <ul class="rows">
+{{rows}}
+  </ul>
+</section>
+
+<section class="block block--quiet">
+  <h2>添加方法</h2>
+  <p>Sileo 和 Irisin 可以一键添加；Zebra 需手动粘贴地址。</p>
+  <p><a class="link" href="{{root}}add/">查看各客户端的添加步骤</a></p>
+</section>

@@ -1,0 +1,40 @@
+<div class="page-head">
+  <h1>添加 {{label}}</h1>
+  <p class="page-head__meta">先把地址复制走，再按客户端粘贴。</p>
+</div>
+
+<section class="copy" aria-labelledby="addr-h2">
+  <h2 id="addr-h2" class="vh">软件源地址</h2>
+  <p class="copy__addr">{{source_url}}</p>
+  <button class="btn btn--primary" type="button" data-copy="{{source_url}}">复制源地址</button>
+</section>
+
+<section class="block">
+  <h2>1 · Sileo</h2>
+  <p>已安装 Sileo 时，点下面的按钮会直接跳到添加页面。</p>
+  <p><a class="btn btn--quiet" href="sileo://source/{{source_url}}">在 Sileo 中打开</a></p>
+  <p class="note">没反应说明还没装 Sileo：打开 <code>sileo</code> 后走「源 → 右上角 + → 粘贴地址」。</p>
+</section>
+
+<section class="block">
+  <h2>2 · Irisin</h2>
+  <p>Irisin 使用它自己的链接格式，点按钮即可添加。</p>
+  <p><a class="btn btn--quiet" href="irisin://repository/add?url={{source_url}}">在 Irisin 中添加</a></p>
+  <p class="note">Irisin 会自动去掉地址末尾的斜杠。</p>
+</section>
+
+<section class="block">
+  <h2>3 · Zebra</h2>
+  <p>Zebra 2 尚未实现一键添加（其源码中的 <code>zbra://</code> 分支仍是 <code>TODO</code>），请手动添加：</p>
+  <ol class="steps">
+    <li>打开 Zebra，进入「源」</li>
+    <li>点右上角 <b>+</b></li>
+    <li>粘贴上面的地址</li>
+    <li>回到源列表下拉刷新</li>
+  </ol>
+</section>
+
+<section class="block block--quiet">
+  <h2>添加之后</h2>
+  <p>软件包需要重新刷新源才会出现。地址末尾的 <code>/</code> 必须保留。</p>
+</section>

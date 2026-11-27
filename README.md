@@ -60,3 +60,17 @@ rootful 包加 `-r rootful`；产物在 `out/<id>_<ver>_<arch>.deb`。
 | `scripts/gen_index.py` | 索引生成器 |
 | `scripts/config.json` | 源名 / 分组 / base_url 配置 |
 | `.github/workflows/update-index.yml` | push 后自动重建索引 |
+
+## 网站
+
+站点由 `web/build.py` 从 `Packages` / `Release` 生成，输出到仓库根目录（Pages 直接服务 `main` 根目录）。
+
+```sh
+python3 web/build.py          # 生成
+python3 web/build.py --check  # 只校验，不写盘
+```
+
+- 源码：`web/templates/*.html`（模板）、`web/assets/style.css`（Token 与布局）、`web/assets/app.js`（搜索/筛选/复制/主题）
+- 设计规范与令牌：`spec/交付B-设计方向与方案.md`
+- 构建脚本只会写白名单路径（`index.html` `404.html` `browse/` `add/` `p/` `assets/` `data/`），并在结束时校验 `Packages`/`Packages.gz`/`Release` 的 SHA256 未变；一旦变化即报错退出
+- 目录名用 `p/` 而非 `packages/`，避免与 APT 的 `Packages` 文件在大小写不敏感的环境下冲突
