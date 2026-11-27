@@ -11,7 +11,11 @@
     if (t === "auto") root.removeAttribute("data-theme");
     else root.setAttribute("data-theme", t);
     root.setAttribute("data-theme-mode", t);
-    if (themeBtn) themeBtn.setAttribute("aria-label", "切换外观：" + label[t]);
+    if (themeBtn) {
+      themeBtn.setAttribute("data-mode", t);
+      themeBtn.setAttribute("aria-label", "外观：" + label[t] + "（点击切换）");
+      themeBtn.setAttribute("title", "外观：" + label[t]);
+    }
     try { localStorage.setItem("dd-theme", t); } catch (e) {}
   }
   var current = "auto";

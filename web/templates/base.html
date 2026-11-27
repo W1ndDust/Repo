@@ -27,7 +27,19 @@
       <a href="{{root}}browse/"{{nav_browse}}>软件包</a>
       <a href="{{root}}add/"{{nav_add}}>添加源</a>
     </nav>
-    <button class="theme" id="themeBtn" type="button" aria-label="切换外观：跟随系统">◐</button>
+    <button class="theme" id="themeBtn" type="button" aria-label="切换外观" data-mode="auto">
+      <svg class="ico ico--auto" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+        <circle cx="10" cy="10" r="7.25"></circle>
+        <path d="M10 2.75a7.25 7.25 0 0 1 0 14.5z" fill="currentColor" stroke="none"></path>
+      </svg>
+      <svg class="ico ico--light" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+        <circle cx="10" cy="10" r="4"></circle>
+        <path d="M10 2.2v1.6M10 16.2v1.6M2.2 10h1.6M16.2 10h1.6M4.5 4.5l1.1 1.1M14.4 14.4l1.1 1.1M15.5 4.5l-1.1 1.1M5.6 14.4l-1.1 1.1"></path>
+      </svg>
+      <svg class="ico ico--dark" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+        <path d="M16.2 12.6A6.75 6.75 0 0 1 7.4 3.8a6.75 6.75 0 1 0 8.8 8.8z"></path>
+      </svg>
+    </button>
   </div>
 </header>
 
@@ -36,7 +48,6 @@
 </main>
 
 <footer class="foot">
-  <p>数据来自本源的 APT <code>Packages</code> 索引，由构建脚本生成。</p>
   <p class="foot__meta">{{label}} · {{package_count}} 个软件包{{foot_extra}}</p>
 </footer>
 

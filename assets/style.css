@@ -63,8 +63,16 @@ code{font-family:var(--font-mono);font-size:.9em;background:var(--surface-2);pad
 .nav a:hover{color:var(--ink)}
 .nav a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--accent)}
 .menu{display:none;margin-left:auto;background:none;border:1px solid var(--line);color:var(--ink);font:inherit;font-size:14px;padding:5px 10px;border-radius:8px}
-.theme{background:none;border:1px solid var(--line);color:var(--ink-2);width:32px;height:32px;border-radius:8px;font-size:14px;line-height:1;cursor:pointer}
+.theme{
+  display:inline-grid;place-items:center;flex:0 0 auto;
+  width:32px;height:32px;padding:0;border:1px solid var(--line);border-radius:8px;
+  background:none;color:var(--ink-2);cursor:pointer;line-height:0;
+}
 .theme:hover{color:var(--ink);border-color:var(--line-strong)}
+.theme .ico{width:16px;height:16px;display:none;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.theme[data-mode="auto"] .ico--auto,
+.theme[data-mode="light"] .ico--light,
+.theme[data-mode="dark"] .ico--dark{display:block}
 
 /* ── 版心 ───────────────────────────── */
 main{max-width:var(--maxw);margin:0 auto;padding:24px var(--pad) 8px}
