@@ -1,0 +1,27 @@
+Package: com.dustdrift.demo.rootless
+Name: DustDriftDemoRootLess
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Section: RootLess
+Maintainer: local
+Depends: firmware (>= 15.0), mobilesubstrate
+Filename: ./debs/com.dustdrift.demo.rootless_1.0.0_iphoneos-arm64.deb
+Size: 2708
+MD5sum: 4d2df4896d89c1e362523a8798dc3940
+SHA1: f76b440f61f3be802bdc78cee3f353730f5e79c9
+SHA256: 1ca8f37eff80b66bd8df21a99cdb74efa46ed067042aa956183406e11b49acce
+Description: DustDriftDemoRootLess — built with ios-toolchain on Minis
+
+Package: com.dustdrift.demo.roothide
+Name: DustDriftDemoRootHide
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Section: RootHide
+Maintainer: local
+Depends: firmware (>= 15.0), mobilesubstrate
+Filename: ./debs/com.dustdrift.demo.roothide_1.0.0_iphoneos-arm64.deb
+Size: 2700
+MD5sum: 9b514ee98cd8342d15f8aa82925f8adc
+SHA1: ecc3f8d7fbfe02e16f253c90161aaccb63b06c36
+SHA256: 2be6e73fd70aec6ce4b19154476024f930041347d25841e14b3acf63174a32b1
+Description: DustDriftDemoRootHide — built with ios-toolchain on Minis
