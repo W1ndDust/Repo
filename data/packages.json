@@ -9,6 +9,19 @@
     ]
   },
   "generated_from": "Packages",
-  "package_count": 0,
-  "packages": []
+  "package_count": 1,
+  "packages": [
+    {
+      "package": "com.mallin.tunnelsharevpn",
+      "name": "TunnelShareVPN",
+      "version": "2.2.0-6",
+      "arch": "iphoneos-arm64e",
+      "section": "RootLess",
+      "size": "573476",
+      "filename": "./debs/com.mallin.tunnelsharevpn_2.2.0-6_iphoneos-arm64e.deb",
+      "sha256": "9aaa99482f16619296a9986f5520720e350eaffda49491f76e21dfb035ced17a",
+      "description": "1. 自动获取永久授权",
+      "url": "p/com.mallin.tunnelsharevpn/"
+    }
+  ]
 }

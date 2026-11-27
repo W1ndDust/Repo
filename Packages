@@ -1,0 +1,21 @@
+Package: com.mallin.tunnelsharevpn
+Name: TunnelShareVPN
+Version: 2.2.0-6
+Architecture: iphoneos-arm64e
+Section: RootLess
+Maintainer: Mallin
+Author: Mallin
+Depends: firmware (>= 15.0), mobilesubstrate | substitute | libhooker | ellekit, com.opa334.ccsupport, preferenceloader
+Pre-Depends: rootless-compat (>= 0.9)
+Filename: ./debs/com.mallin.tunnelsharevpn_2.2.0-6_iphoneos-arm64e.deb
+Size: 573476
+MD5sum: ace9c0aba59547120a6af91352618135
+SHA1: 03cee9a6b39b5a6f83daa06d81658ea045cde40c
+SHA256: 9aaa99482f16619296a9986f5520720e350eaffda49491f76e21dfb035ced17a
+Description: 1. 自动获取永久授权
+ 3. 功能1：实现本手机的科学上网功能直接通过热点形式分享给其他设备；
+ 4. 功能2：☆支持热点连接Wi-Fi时流量走Wi-Fi，而不是手机的“蜂窝网络”☆；
+ 5. 功能3：WiFi热点分享时，支持关闭“蜂窝网络”；
+ 6. 在“设置-控制中心”添加快捷键，即可实现一键操作或者手动模式进行分享；
+ 7. 本插件只限用于学术科研与查阅外网资料！
+ 8. 作者QQ：523635737 好用请支持正版
