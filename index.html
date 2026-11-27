@@ -72,6 +72,8 @@
     background:linear-gradient(var(--accent),var(--accent2))}
   .sechdr .n{color:var(--dim);font-weight:500;font-size:12px}
   .sechdr .ln{flex:1;height:1px;background:var(--line)}
+  .hint{margin-top:10px;text-align:center;font-size:12.5px;color:var(--dim)}
+  .hint a{color:var(--accent);text-decoration:none}
   ol,ul{margin:0;padding-left:20px;color:var(--dim);font-size:13.5px}
   li{margin:5px 0}
   code{font:12.5px ui-monospace,Menlo,monospace;background:rgba(127,127,127,.16);padding:2px 6px;border-radius:6px;color:var(--txt)}
@@ -99,6 +101,7 @@
     <button onclick="copyUrl()">复制源地址</button>
     <button class="ghost" onclick="openSileo()">在 Sileo 打开</button>
   </div>
+  <div class="hint" id="hint">Zebra 用户 <a href="javascript:openZebra()">点此添加</a></div>
 </div>
 
 <h2>插件列表 <span id="count"></span></h2>
@@ -141,7 +144,8 @@ function copyUrl(){
     document.body.removeChild(ta);
   }
 }
-function openSileo(){ location.href = 'sileo://source/' + base.replace(/^https?:\/\//,''); }
+function openSileo(){ location.href = 'sileo://source/' + base; }
+function openZebra(){ location.href = 'zbra://sources/add/' + base; }
 
 function fmtSize(n){
   if (!n) return '';
