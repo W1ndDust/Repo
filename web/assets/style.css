@@ -57,7 +57,7 @@ code{font-family:var(--font-mono);font-size:.9em;background:var(--surface-2);pad
 .top{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
 .top__wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);display:flex;align-items:center;gap:12px;min-height:52px}
 .brand{display:inline-flex;align-items:center;text-decoration:none;line-height:0}
-.brand img{border-radius:7px}
+.brand img{border-radius:9px;box-shadow:0 0 0 1px var(--line)}
 .nav{display:flex;gap:16px;margin-left:auto;font-size:14px}
 .nav a{text-decoration:none;color:var(--ink-2);padding:6px 0;border-bottom:1px solid transparent}
 .nav a:hover{color:var(--ink)}
