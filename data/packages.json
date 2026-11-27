@@ -9,6 +9,31 @@
     ]
   },
   "generated_from": "Packages",
-  "package_count": 0,
-  "packages": []
+  "package_count": 2,
+  "packages": [
+    {
+      "package": "com.dustdrift.demo.rootless",
+      "name": "DustDriftDemoRootLess",
+      "version": "1.0.0",
+      "arch": "iphoneos-arm64",
+      "section": "RootLess",
+      "size": "2708",
+      "filename": "./debs/com.dustdrift.demo.rootless_1.0.0_iphoneos-arm64.deb",
+      "sha256": "1ca8f37eff80b66bd8df21a99cdb74efa46ed067042aa956183406e11b49acce",
+      "description": "DustDriftDemoRootLess — built with ios-toolchain on Minis",
+      "url": "p/com.dustdrift.demo.rootless/"
+    },
+    {
+      "package": "com.dustdrift.demo.roothide",
+      "name": "DustDriftDemoRootHide",
+      "version": "1.0.0",
+      "arch": "iphoneos-arm64",
+      "section": "RootHide",
+      "size": "2700",
+      "filename": "./debs/com.dustdrift.demo.roothide_1.0.0_iphoneos-arm64.deb",
+      "sha256": "2be6e73fd70aec6ce4b19154476024f930041347d25841e14b3acf63174a32b1",
+      "description": "DustDriftDemoRootHide — built with ios-toolchain on Minis",
+      "url": "p/com.dustdrift.demo.roothide/"
+    }
+  ]
 }
