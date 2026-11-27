@@ -12,18 +12,6 @@
   "package_count": 3,
   "packages": [
     {
-      "package": "com.mallin.tunnelsharevpn",
-      "name": "TunnelShareVPN",
-      "version": "2.2.0-6",
-      "arch": "iphoneos-arm64e",
-      "section": "RootLess",
-      "size": "573476",
-      "filename": "./debs/com.mallin.tunnelsharevpn_2.2.0-6_iphoneos-arm64e.deb",
-      "sha256": "9aaa99482f16619296a9986f5520720e350eaffda49491f76e21dfb035ced17a",
-      "description": "1. 自动获取永久授权",
-      "url": "p/com.mallin.tunnelsharevpn/"
-    },
-    {
       "package": "com.wcplugins.tweak",
       "name": "WCPlugins",
       "version": "2.1",
@@ -34,6 +22,18 @@
       "sha256": "2e2dc7842a20b27e05517e9aead7dd7a606660c08faf3a6df20732d9deb666df",
       "description": "微信插件管理：外观自定义、拖动排序、显隐与重命名。",
       "url": "p/com.wcplugins.tweak/"
+    },
+    {
+      "package": "com.mallin.tunnelsharevpn",
+      "name": "TunnelShareVPN",
+      "version": "2.2.0-6",
+      "arch": "iphoneos-arm64e",
+      "section": "RootHide",
+      "size": "573476",
+      "filename": "./debs/com.mallin.tunnelsharevpn_2.2.0-6_iphoneos-arm64e.deb",
+      "sha256": "9aaa99482f16619296a9986f5520720e350eaffda49491f76e21dfb035ced17a",
+      "description": "1. 自动获取永久授权",
+      "url": "p/com.mallin.tunnelsharevpn/"
     },
     {
       "package": "com.wcplugins.tweak.roothide",

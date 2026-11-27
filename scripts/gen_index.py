@@ -43,6 +43,25 @@ FIELDS = [
 ]
 
 
+def install_layout(deb: Path) -> str:
+    """按包内文件的实际安装路径判断 bootstrap 类型，而不是靠包名猜。
+
+    /var/jb/...        → rootless（无根）
+    其他（/Library/...）→ rootful / rootHide（隐根）
+    """
+    try:
+        out = subprocess.run(["dpkg-deb", "-c", str(deb)],
+                             capture_output=True, text=True, check=True).stdout
+    except subprocess.CalledProcessError:
+        return "unknown"
+    paths = [ln.split()[-1] for ln in out.splitlines() if ln.strip()]
+    if any(p.startswith("./var/jb/") for p in paths):
+        return "rootless"
+    if any(p.startswith(("./Library/", "./usr/", "./Applications/")) for p in paths):
+        return "rootful"
+    return "unknown"
+
+
 def classify(deb: Path, c: dict) -> str:
     pid = c.get("Package", "")
     if pid in OVERRIDE:
@@ -50,14 +69,19 @@ def classify(deb: Path, c: dict) -> str:
         return want if want in SECTIONS else DEFAULT_SECTION
     if c.get("Section") in SECTIONS:
         return c["Section"]
-    blob = " ".join([
-        pid, deb.name, c.get("Name", ""), c.get("Depends", ""),
-        c.get("Description", ""),
-    ]).lower()
-    if "roothide" in blob or "root hide" in blob or "root-hide" in blob:
-        return "RootHide" if "RootHide" in SECTIONS else DEFAULT_SECTION
-    if "rootless" in blob:
+
+    # 1) 安装路径最可信
+    layout = install_layout(deb)
+    if layout == "rootless":
         return "RootLess" if "RootLess" in SECTIONS else DEFAULT_SECTION
+    if layout == "rootful":
+        return "RootHide" if "RootHide" in SECTIONS else DEFAULT_SECTION
+
+    # 2) 路径无法判断时，才退回关键词
+    blob = " ".join([pid, deb.name, c.get("Name", ""), c.get("Depends", ""),
+                     c.get("Description", "")]).lower()
+    if "roothide" in blob or "root hide" in blob:
+        return "RootHide" if "RootHide" in SECTIONS else DEFAULT_SECTION
     return DEFAULT_SECTION
 
 

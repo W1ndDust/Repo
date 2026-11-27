@@ -1,8 +1,24 @@
+Package: com.wcplugins.tweak
+Name: WCPlugins
+Version: 2.1
+Architecture: iphoneos-arm64
+Section: RootLess
+Maintainer: WCPlugins
+Author: WCPlugins
+Depends: firmware (>= 11.0)
+Filename: ./debs/com.wcplugins.tweak_2.1_iphoneos-arm64.deb
+Size: 113120
+MD5sum: 9ec9e96c8425f607a9aafa253bcc4d4b
+SHA1: 9159ea6e90cf000944a9f02ec43692bdc5617fc7
+SHA256: 2e2dc7842a20b27e05517e9aead7dd7a606660c08faf3a6df20732d9deb666df
+SileoDepiction: https://w1nddust.github.io/Repo/depictions/com.wcplugins.tweak.json
+Description: 微信插件管理：外观自定义、拖动排序、显隐与重命名。
+
 Package: com.mallin.tunnelsharevpn
 Name: TunnelShareVPN
 Version: 2.2.0-6
 Architecture: iphoneos-arm64e
-Section: RootLess
+Section: RootHide
 Maintainer: Mallin
 Author: Mallin
 Depends: firmware (>= 15.0), mobilesubstrate | substitute | libhooker | ellekit, com.opa334.ccsupport, preferenceloader
@@ -20,22 +36,6 @@ Description: 1. 自动获取永久授权
  6. 在“设置-控制中心”添加快捷键，即可实现一键操作或者手动模式进行分享；
  7. 本插件只限用于学术科研与查阅外网资料！
  8. 作者QQ：523635737 好用请支持正版
-
-Package: com.wcplugins.tweak
-Name: WCPlugins
-Version: 2.1
-Architecture: iphoneos-arm64
-Section: RootLess
-Maintainer: WCPlugins
-Author: WCPlugins
-Depends: firmware (>= 11.0)
-Filename: ./debs/com.wcplugins.tweak_2.1_iphoneos-arm64.deb
-Size: 113120
-MD5sum: 9ec9e96c8425f607a9aafa253bcc4d4b
-SHA1: 9159ea6e90cf000944a9f02ec43692bdc5617fc7
-SHA256: 2e2dc7842a20b27e05517e9aead7dd7a606660c08faf3a6df20732d9deb666df
-SileoDepiction: https://w1nddust.github.io/Repo/depictions/com.wcplugins.tweak.json
-Description: 微信插件管理：外观自定义、拖动排序、显隐与重命名。
 
 Package: com.wcplugins.tweak.roothide
 Name: WCPlugins（隐根）
