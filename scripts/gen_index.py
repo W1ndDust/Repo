@@ -156,7 +156,6 @@ def main():
         f"Codename: {CFG['codename']}",
         "Components: main",
         "Architectures: " + " ".join(CFG["architectures"]),
-        "Sections: " + " ".join(SECTIONS),
         f"Icon: {CFG['icon']}",
         f"Description: {CFG['description']}",
     ]) + "\n"
