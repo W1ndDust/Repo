@@ -9,13 +9,38 @@
     ]
   },
   "stats": {
-    "total": 3,
+    "total": 4,
     "by_section": {
       "RootLess": 1,
-      "RootHide": 2
+      "RootHide": 3
     }
   },
   "packages": [
+    {
+      "package": "com.nicksworks.roadrunnerreborn",
+      "slug": "com.nicksworks.roadrunnerreborn",
+      "name": "RoadRunner Reborn",
+      "version": "1.2.1",
+      "architecture": "iphoneos-arm64",
+      "section": "RootHide",
+      "env": "RootHide",
+      "summary": "RoadRunner Reborn preserves Now Playing media and selected applications through SpringBoard resprings, with optional simultaneous multi-app audio playback. A userspace reboot is required after install, update, enable, disable, or removal; Safe Mode alone does not unload the daemon-side hook.",
+      "description": "",
+      "maintainer": "Nick's Works <hadobedo@gmail.com>",
+      "author": "Nick's Works (Hadobedo)",
+      "depends": [
+        "firmware (>= 15.0)",
+        "ellekit",
+        "preferenceloader",
+        "com.opa334.altlist"
+      ],
+      "filename": "debs/com.nicksworks.roadrunnerreborn_1.2.1_iphoneos-arm64.deb",
+      "size": 96154,
+      "size_label": "94 KB",
+      "sha256": "629c0d51f97bc6a8bc8d7066fcdf8a44f7460a7e0e6de897b4c7126ec66ed74b",
+      "homepage": "https://github.com/hadobedo/RoadRunnerReborn",
+      "changelog": "depictions/changelogs/com.nicksworks.roadrunnerreborn.md"
+    },
     {
       "package": "com.mallin.tunnelsharevpn",
       "slug": "com.mallin.tunnelsharevpn",

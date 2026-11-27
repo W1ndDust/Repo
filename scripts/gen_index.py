@@ -54,10 +54,18 @@ def install_layout(deb: Path) -> str:
                              capture_output=True, text=True, check=True).stdout
     except subprocess.CalledProcessError:
         return "unknown"
-    paths = [ln.split()[-1] for ln in out.splitlines() if ln.strip()]
-    if any(p.startswith("./var/jb/") for p in paths):
+    # dpkg-deb -c 的路径有时带 "./"，有时不带，先统一
+    paths = []
+    for ln in out.splitlines():
+        if not ln.strip():
+            continue
+        p = ln.split()[-1]
+        if p.startswith("./"):
+            p = p[2:]
+        paths.append(p)
+    if any(p.startswith("var/jb/") for p in paths):
         return "rootless"
-    if any(p.startswith(("./Library/", "./usr/", "./Applications/")) for p in paths):
+    if any(p.startswith(("Library/", "usr/", "Applications/", "System/")) for p in paths):
         return "rootful"
     return "unknown"
 

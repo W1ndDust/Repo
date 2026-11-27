@@ -14,6 +14,26 @@ SHA256: 2e2dc7842a20b27e05517e9aead7dd7a606660c08faf3a6df20732d9deb666df
 SileoDepiction: https://w1nddust.github.io/Repo/depictions/com.wcplugins.tweak.json
 Description: 微信插件管理：外观自定义、拖动排序、显隐与重命名。
 
+Package: com.nicksworks.roadrunnerreborn
+Name: RoadRunner Reborn
+Version: 1.2.1
+Architecture: iphoneos-arm64
+Section: RootHide
+Maintainer: Nick's Works <hadobedo@gmail.com>
+Author: Nick's Works (Hadobedo)
+Depends: firmware (>= 15.0), ellekit, preferenceloader, com.opa334.altlist
+Conflicts: com.nick.keepthepartygoing, se.nosskirneh.roadrunner, com.nicksworks.probrainrot
+Replaces: com.nick.keepthepartygoing, se.nosskirneh.roadrunner, com.nicksworks.probrainrot
+Homepage: https://github.com/hadobedo/RoadRunnerReborn
+Filename: ./debs/com.nicksworks.roadrunnerreborn_1.2.1_iphoneos-arm64.deb
+Size: 96154
+Installed-Size: 1244
+MD5sum: c7596bba95699bd566af6b042cf3eaf7
+SHA1: 078065814211f55f3ce013999d2d50569875eabd
+SHA256: 629c0d51f97bc6a8bc8d7066fcdf8a44f7460a7e0e6de897b4c7126ec66ed74b
+SileoDepiction: https://w1nddust.github.io/Repo/depictions/com.nicksworks.roadrunnerreborn.json
+Description: RoadRunner Reborn preserves Now Playing media and selected applications through SpringBoard resprings, with optional simultaneous multi-app audio playback. A userspace reboot is required after install, update, enable, disable, or removal; Safe Mode alone does not unload the daemon-side hook.
+
 Package: com.mallin.tunnelsharevpn
 Name: TunnelShareVPN
 Version: 2.2.0-6
