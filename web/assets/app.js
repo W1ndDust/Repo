@@ -81,6 +81,12 @@
       if (hit) shown++;
     });
     if (empty) empty.hidden = shown !== 0;
+    if (empty) {
+      var repoEmpty = rows.length === 0;
+      var txt = document.getElementById("emptyText");
+      if (txt) txt.textContent = repoEmpty ? "源里还没有软件包" : "没有匹配的软件包";
+      if (clearAll) clearAll.hidden = repoEmpty;
+    }
     if (countEl) countEl.textContent = shown + " 个";
     if (clearBtn) clearBtn.hidden = !(q && q.value);
   }
