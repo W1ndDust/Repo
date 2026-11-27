@@ -199,7 +199,8 @@ def build_home(repo: dict, pkgs: list[dict]) -> str:
             items.append(
                 f'<li><a class="row" href="{root}browse/#{esc(sec)}">'
                 f'<span class="row__body"><span class="row__name">{esc(sec)}</span></span>'
-                f'<span class="row__meta">{note}</span></a></li>'
+                f'<span class="row__meta">{note}</span>'
+                f'<span class="row__chev" aria-hidden="true">›</span></a></li>'
             )
         section_list = (
             '<section class="block" aria-labelledby="sec-h">'

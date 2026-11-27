@@ -103,7 +103,8 @@ main{max-width:var(--maxw);margin:0 auto;padding:24px var(--pad) 8px}
 
 /* ── 状态行 ─────────────────────────── */
 .status{padding:16px 0;border-bottom:1px solid var(--line)}
-.status__line{display:flex;flex-wrap:wrap;gap:6px 18px;color:var(--ink-2);font-size:14px;font-variant-numeric:tabular-nums}
+.status__line{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 0;color:var(--ink-2);font-size:14px;font-variant-numeric:tabular-nums}
+.status__line>span+span{border-left:1px solid var(--line);margin-left:16px;padding-left:16px}
 .status__line b{color:var(--ink);font-weight:600}
 
 /* ── 区块与列表 ─────────────────────── */
@@ -135,6 +136,8 @@ main{max-width:var(--maxw);margin:0 auto;padding:24px var(--pad) 8px}
 .tag{font-size:11.5px;font-weight:500;color:var(--ink-2);border:1px solid var(--line-strong);border-radius:6px;padding:0 6px;line-height:18px}
 
 .rows .row>.row__meta:only-child,.rows .row>.row__meta:last-child{margin-left:auto;text-align:right;flex:0 0 auto}
+.row__chev{color:var(--ink-3);font-size:17px;line-height:1;align-self:center}
+.row:hover .row__chev{color:var(--ink)}
 /* ── 工具条 ─────────────────────────── */
 .page-head{padding-bottom:16px}
 .page-head h1{font-size:clamp(22px,6vw,26px);line-height:1.2;overflow-wrap:break-word}
@@ -200,7 +203,7 @@ main{max-width:var(--maxw);margin:0 auto;padding:24px var(--pad) 8px}
 }
 .toast[data-show="1"]{opacity:1;transform:translate(-50%,0)}
 
-@media (max-width:420px){
+@media (max-width:359px){
   .nav{display:none}
   .nav[data-open="1"]{display:flex;position:absolute;top:52px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px var(--pad) 14px;flex-direction:column;gap:2px}
   .nav[data-open="1"] a{padding:10px 0;border-bottom:1px solid var(--line)}
