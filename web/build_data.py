@@ -128,8 +128,7 @@ def build() -> dict:
         lines = desc.split("\n")
         summary = lines[0].strip()
         body = "\n".join(l.strip() for l in lines[1:]).strip()
-        # 索引中省略 Section 的 arm64e 包，网页侧按约定显示为 RootHide Packages
-        sec = s.get("Section") or ("RootHide Packages" if s.get("Architecture") == "iphoneos-arm64e" else "未分类")
+        sec = s.get("Section") or "未分类"
         packages.append({
             "package": s["Package"],
             "slug": slug(s["Package"]),

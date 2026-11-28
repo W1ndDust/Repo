@@ -18,6 +18,7 @@ Package: com.mlgm.airdropx
 Name: AirDropX
 Version: 1.0.2
 Architecture: iphoneos-arm64e
+Section: RootHide Packages
 Maintainer: mlgm
 Author: mlgm
 Depends: firmware (>= 16.2), mobilesubstrate
@@ -34,6 +35,7 @@ Package: com.iosdump.appdata
 Name: AppData软件增强-RootHide
 Version: 2.7.5
 Architecture: iphoneos-arm64e
+Section: RootHide Packages
 Maintainer: iosdump
 Author: iosdump
 Depends: firmware (>= 11.0), mobilesubstrate, preferenceloader
@@ -57,6 +59,7 @@ Package: com.82flex.noredirect
 Name: No Redirect
 Version: 2.1
 Architecture: iphoneos-arm64e
+Section: RootHide Packages
 Maintainer: Lessica <82flex@gmail.com>
 Author: Lessica <82flex@gmail.com>
 Depends: firmware (>= 14.0), mobilesubstrate, preferenceloader, com.opa334.altlist, com.opa334.libsandy
@@ -73,6 +76,7 @@ Package: com.nicksworks.roadrunnerreborn
 Name: RoadRunner Reborn
 Version: 1.2.1
 Architecture: iphoneos-arm64e
+Section: RootHide Packages
 Maintainer: Nick's Works <hadobedo@gmail.com>
 Author: Nick's Works (Hadobedo)
 Depends: firmware (>= 15.0), ellekit, preferenceloader, com.opa334.altlist
@@ -92,6 +96,7 @@ Package: cn.llld.settingsudid
 Name: SettingsUDID-roothide
 Version: 1.0
 Architecture: iphoneos-arm64e
+Section: RootHide Packages
 Maintainer: 来了老弟
 Author: iCraze
 Depends: firmware (>= 12.0), mobilesubstrate (>= 0.9.5000)
@@ -108,6 +113,7 @@ Package: com.mallin.tunnelsharevpn
 Name: TunnelShareVPN
 Version: 2.2.0-6
 Architecture: iphoneos-arm64e
+Section: RootHide Packages
 Maintainer: Mallin
 Author: Mallin
 Depends: firmware (>= 15.0), mobilesubstrate | substitute | libhooker | ellekit, com.opa334.ccsupport, preferenceloader
@@ -130,6 +136,7 @@ Package: iya.banana.vehiclemotioncues
 Name: Vehicle Motion Cues
 Version: 0.0.2
 Architecture: iphoneos-arm64e
+Section: RootHide Packages
 Maintainer: hades
 Author: hades
 Depends: firmware (>= 15.0), firmware (<< 18.0), mobilesubstrate, preferenceloader, com.opa334.ccsupport (>= 1.3.10)
@@ -146,6 +153,7 @@ Package: com.wcplugins.tweak.roothide
 Name: WCPlugins（隐根）
 Version: 2.1
 Architecture: iphoneos-arm64e
+Section: RootHide Packages
 Maintainer: WCPlugins
 Author: WCPlugins
 Depends: firmware (>= 11.0)
