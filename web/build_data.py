@@ -100,8 +100,11 @@ def validate(stanzas: list[dict], sections: list[str]) -> None:
         if s.get("Section") not in sections:
             errors.append(f"{pid}: Section「{s.get('Section')}」不在配置分组 {sections} 内")
 
-        if not re.fullmatch(r"iphoneos-arm(64|64e)?", s.get("Architecture", "")):
-            errors.append(f"{pid}: 架构「{s.get('Architecture')}」不是已知 iOS 架构")
+        arch = s.get("Architecture", "")
+        if arch not in ("iphoneos-arm", "iphoneos-arm64"):
+            # 不硬失败：包仍可展示，但要指出客户端会把它归入「<分组> Packages」
+            print(f"⚠️  {pid}: 架构「{arch}」不被 Sileo 识别，"
+                  f"会出现在「<分组> Packages」分组", file=sys.stderr)
 
     if errors:
         print("❌ 数据校验失败：", file=sys.stderr)

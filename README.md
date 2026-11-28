@@ -61,6 +61,27 @@ rootful 包加 `-r rootful`；产物在 `out/<id>_<ver>_<arch>.deb`。
 | `scripts/config.json` | 源名 / 分组 / base_url 配置 |
 | `.github/workflows/update-index.yml` | push 后自动重建索引 |
 
+### 架构规范化（自动，勿手工改）
+
+Sileo 只认 `iphoneos-arm` 和 `iphoneos-arm64`。声明成 `iphoneos-arm64e` 的包会被判为
+「本机不可安装」，客户端自动放进「<分组> Packages」分组——这是该分组反复出现的唯一原因。
+
+`scripts/normalize_debs.py` 会：
+
+1. 读每个 deb 的 control 架构；
+2. 不在白名单 → 检查包内 Mach-O 真实架构；
+3. 含 arm64 切片 → 改写为 `iphoneos-arm64` 并重命名文件（`data.tar` 逐字节保留）；
+4. 只有 arm64e → 保持原样并打印警告（这类包换标签会导致装完不生效）。
+
+两个工作流都会在生成前自动执行它，本地也建议先跑一遍：
+
+```sh
+python3 scripts/normalize_debs.py --check   # 只报告
+python3 scripts/normalize_debs.py           # 执行
+```
+
+脚本幂等：已规范的包不会产生任何 diff。
+
 ## 网站
 
 站点由三个脚本分三层生成，数据只有一条链：**debs → Packages → data/packages.json → 页面**。

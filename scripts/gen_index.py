@@ -187,6 +187,13 @@ def main():
         })
         print(f"  + {c.get('Package')} {c.get('Version','')} [{c.get('Architecture','')}]")
 
+    bad_arch = [c.get("Package") for _, _, c in items
+                if c.get("Architecture") not in ("iphoneos-arm", "iphoneos-arm64")]
+    if bad_arch:
+        print("⚠️  以下包的架构不是 iphoneos-arm/iphoneos-arm64，"
+              "Sileo 会把它们列入「<分组> Packages」：", ", ".join(bad_arch))
+        print("   运行 python3 scripts/normalize_debs.py 自动修正（仅当二进制含 arm64）")
+
     pkg_text = "\n".join(stanzas)
     (ROOT / "Packages").write_text(pkg_text, encoding="utf-8")
     with open(ROOT / "Packages.gz", "wb") as fh:
@@ -208,6 +215,14 @@ def main():
     (ROOT / "Release").write_text(release, encoding="utf-8")
 
     # 网页数据由 web/build.py 直接从 Packages 生成，这里不再另写一份
+    # 护栏：Sileo 不识别 iphoneos-arm64e，会让包落进「<分组> Packages」
+    bad = [p["package"] for p in web if p.get("arch") == "iphoneos-arm64e"]
+    if bad:
+        print("⚠️  以下包声明 iphoneos-arm64e，客户端会判为不可安装：")
+        for b in bad:
+            print(f"     - {b}")
+        print("     处理：python3 scripts/normalize_debs.py（二进制含 arm64 时会自动改写）")
+
     counts = {s: sum(1 for p in web if p["section"] == s) for s in SECTIONS}
     print("\n✅ 索引已生成：" + "，".join(f"{s} {n} 个" for s, n in counts.items()))
 

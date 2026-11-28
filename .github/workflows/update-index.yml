@@ -24,6 +24,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: 规范化 deb 架构
+        run: python3 scripts/normalize_debs.py
+
       - name: 生成 Packages / Release
         run: python3 scripts/gen_index.py .
 
@@ -31,7 +34,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add Packages Packages.gz Release
+          git add Packages Packages.gz Release debs
           if git diff --cached --quiet; then
             echo "索引无变化"
           else
