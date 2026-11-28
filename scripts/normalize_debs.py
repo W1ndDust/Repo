@@ -109,8 +109,9 @@ def main() -> None:
         real = binary_archs(deb)
         detail = "+".join(sorted(real)) or "未知"
         if "arm64" in real:
-            print(f"[提示] {name}: 声明 {arch}，二进制含 {detail} —— 保持声明不动"
-                  f"（Sileo 会把它列入「<分组> Packages」，这是已确认的预期行为）")
+            print(f"[规范化] {name}: {arch} → {TARGET}（二进制含 {detail}）")
+            if not check:
+                repack(deb, TARGET)
             changed += 1
         else:
             print(f"[警告] {name}: 声明 {arch}，二进制仅 {detail}。"
@@ -119,9 +120,9 @@ def main() -> None:
             warned += 1
             skipped += 1
 
-    print(f"检查完成：{changed} 个非白名单架构（保持原样，仅提示），{warned} 个仅 arm64e")
-    print("说明：Sileo 只认 iphoneos-arm/iphoneos-arm64；arm64e 会被归入「<分组> Packages」。"
-          "本脚本不再改写 deb。")
+    print(f"完成：规范化 {changed} 个，仅 arm64e 保留 {warned} 个")
+    print("说明：Sileo 会把 arm64e 包另聚合成一组，导致分类列表出现两条；"
+          "统一为 arm64 后分组只由 Section 决定。")
 
 
 if __name__ == "__main__":
