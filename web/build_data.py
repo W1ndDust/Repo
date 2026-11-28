@@ -99,8 +99,8 @@ def validate(stanzas: list[dict], sections: list[str]) -> None:
                 if actual != s["SHA256"]:
                     errors.append(f"{pid}: SHA256 不一致")
 
-        if s.get("Section") not in sections:
-            errors.append(f"{pid}: Section「{s.get('Section')}」不在配置分组 {sections} 内")
+        if s.get("Section") and s["Section"] not in sections:
+            errors.append(f"{pid}: Section「{s['Section']}」不在配置分组 {sections} 内")
 
         arch = s.get("Architecture", "")
         if arch not in ("iphoneos-arm", "iphoneos-arm64"):
@@ -128,7 +128,8 @@ def build() -> dict:
         lines = desc.split("\n")
         summary = lines[0].strip()
         body = "\n".join(l.strip() for l in lines[1:]).strip()
-        sec = s["Section"]
+        # 索引中省略 Section 的 arm64e 包，网页侧按约定显示为 RootHide Packages
+        sec = s.get("Section") or ("RootHide Packages" if s.get("Architecture") == "iphoneos-arm64e" else "未分类")
         packages.append({
             "package": s["Package"],
             "slug": slug(s["Package"]),

@@ -165,8 +165,15 @@ def main():
         h = hashes(deb)
         lines = []
         for f in FIELDS:
-            if c.get(f):
-                lines.append(f"{f}: {c[f]}")
+            if not c.get(f):
+                continue
+            # Sileo 会为 arm64e 包自动生成「RootHide Packages」组；
+            # 若我们再声明同名 Section 就会出现两条重名分组，故此处省略。
+            if (f == "Section"
+                    and c.get("Architecture") == "iphoneos-arm64e"
+                    and c.get("Section") == sec_of("RootHide")):
+                continue
+            lines.append(f"{f}: {c[f]}")
         lines.append(f"Filename: {rel}")
         lines.append(f"Size: {h['Size']}")
         if c.get("Installed-Size"):
