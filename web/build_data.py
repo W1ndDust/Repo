@@ -107,8 +107,7 @@ def validate(stanzas: list[dict], sections: list[str]) -> None:
             arm64e.add(pid)
 
     if arm64e:
-        print(f"ℹ️  {len(arm64e)} 个包声明 iphoneos-arm64e：Sileo 会把它们归入"
-              f"「<分组> Packages」分组（已确认的预期行为）")
+        print(f"ℹ️  {len(arm64e)} 个包声明 iphoneos-arm64e")
 
     if errors:
         print("❌ 数据校验失败：", file=sys.stderr)

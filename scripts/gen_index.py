@@ -202,7 +202,7 @@ def main():
     bad_arch = [c.get("Package") for _, _, c in items
                 if c.get("Architecture") not in ("iphoneos-arm", "iphoneos-arm64")]
     if bad_arch:
-        print(f"ℹ️  {len(bad_arch)} 个包声明 iphoneos-arm64e → Sileo 归入「<分组> Packages」")
+        print(f"ℹ️  {len(bad_arch)} 个包声明 iphoneos-arm64e（Sileo 只认 arm/arm64，客户端可能灰显）")
 
     pkg_text = "\n".join(stanzas)
     (ROOT / "Packages").write_text(pkg_text, encoding="utf-8")

@@ -13,12 +13,9 @@
   "icon": "CydiaIcon.png",
   "sections": [
     "RootLess Packages",
-    "RootHide",
+    "RootHide Packages",
     "System",
     "TrollStore"
   ],
-  "default_section": "RootLess Packages",
-  "section_labels": {
-    "RootHide": "RootHide Packages"
-  }
+  "default_section": "RootLess Packages"
 }
