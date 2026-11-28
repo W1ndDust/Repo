@@ -7,7 +7,7 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "暂无描述。",
+          "markdown": "ElleKit tweak injection libraries and loader",
           "useSpacing": true
         }
       ]

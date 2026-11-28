@@ -7,7 +7,7 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "暂无描述。",
+          "markdown": "为控制中心「隔空投送」新增「所有人（无限制）」模式，并向 Actra 提供四种接收模式动作。",
           "useSpacing": true
         }
       ]

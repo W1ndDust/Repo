@@ -7,7 +7,7 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "暂无描述。",
+          "markdown": "RoadRunner Reborn preserves Now Playing media and selected applications through SpringBoard resprings, with optional simultaneous multi-app audio playback. A userspace reboot is required after install, update, enable, disable, or removal; Safe Mode alone does not unload the daemon-side hook.",
           "useSpacing": true
         }
       ]

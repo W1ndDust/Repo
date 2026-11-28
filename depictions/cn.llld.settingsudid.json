@@ -7,7 +7,7 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "暂无描述。",
+          "markdown": "Check your UDID from the Settings > General > About phone page!从“设置”>\"通用\">“关于手机”页查看您的UDID！_________仅测试用,有问题卸载---roothide",
           "useSpacing": true
         }
       ]

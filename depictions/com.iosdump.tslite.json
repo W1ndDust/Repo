@@ -7,7 +7,7 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "暂无描述。",
+          "markdown": "越狱专用的APP安装器，iosdump修改版TrollStoreLite，功能多多(程序改名、换图标、解密、降级等)；同步最新代码v2.1.1-2：修复内置 ldid 生成的签名可执行段信息。",
           "useSpacing": true
         }
       ]

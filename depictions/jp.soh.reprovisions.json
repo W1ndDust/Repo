@@ -7,7 +7,7 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "* 仅支持 iOS 17 Relaxin 越狱\n\n* 解决非巨魔设备签名 Relaxin IPA 问题\n* Re-signing tool for iOS jailbreak",
+          "markdown": "使用 苹果 ID 续签 IPA\n\n* 仅支持 iOS 17 Relaxin 越狱\n* 解决非巨魔设备签名 Relaxin IPA 问题\n* Re-signing tool for iOS jailbreak",
           "useSpacing": true
         }
       ]

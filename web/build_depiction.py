@@ -70,7 +70,10 @@ def main() -> None:
     count = 0
     for pkg in index["packages"]:
         pkg_id = pkg["package"]
-        data = build({"Package": pkg_id, "Description": pkg.get("description", "")})
+        # 必须用「首行 + 续行」的完整描述：data 里的 description 只有续行
+        full = "\n".join(x for x in (pkg.get("summary", "").strip(),
+                                     pkg.get("description", "").strip()) if x)
+        data = build({"Package": pkg_id, "Description": full})
         (OUT / f"{pkg_id}.json").write_text(
             json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         count += 1

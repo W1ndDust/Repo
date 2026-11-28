@@ -7,7 +7,7 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "暂无描述。",
+          "markdown": "Enables the ability to install unsigned/fakesigned iOS applications.",
           "useSpacing": true
         }
       ]

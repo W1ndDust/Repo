@@ -7,7 +7,7 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "暂无描述。",
+          "markdown": "微信插件管理：外观自定义、拖动排序、显隐与重命名。",
           "useSpacing": true
         }
       ]
