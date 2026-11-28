@@ -8,7 +8,6 @@ on:
       - 'depictions/**'
       - 'scripts/**'
       - 'Release'
-      - 'Packages'
   workflow_dispatch:
 
 permissions:
