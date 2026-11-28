@@ -213,7 +213,7 @@
       "slug": "cn.llld.settingsudid",
       "name": "SettingsUDID-roothide",
       "version": "1.0",
-      "architecture": "iphoneos-arm64e",
+      "architecture": "iphoneos-arm64",
       "section": "RootHide",
       "env": "RootHide",
       "summary": "Check your UDID from the Settings > General > About phone page!从“设置”>\"通用\">“关于手机”页查看您的UDID！_________仅测试用,有问题卸载---roothide",
@@ -224,10 +224,10 @@
         "firmware (>= 12.0)",
         "mobilesubstrate (>= 0.9.5000)"
       ],
-      "filename": "debs/cn.llld.settingsudid_1.0_iphoneos-arm64e.deb",
-      "size": 3648,
+      "filename": "debs/cn.llld.settingsudid_1.0_iphoneos-arm64.deb",
+      "size": 3636,
       "size_label": "4 KB",
-      "sha256": "9ae03701e07b2190846e87d558dee294e31e061c04968204acb3b560dc570e33",
+      "sha256": "dce3cbcbc18ecc5a62d3445b7f430f69f3815e16d34cd5be10314334852e8e9e",
       "homepage": "",
       "changelog": "depictions/changelogs/cn.llld.settingsudid.md"
     },

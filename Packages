@@ -95,17 +95,17 @@ Description: RoadRunner Reborn preserves Now Playing media and selected applicat
 Package: cn.llld.settingsudid
 Name: SettingsUDID-roothide
 Version: 1.0
-Architecture: iphoneos-arm64e
+Architecture: iphoneos-arm64
 Section: RootHide
 Maintainer: 来了老弟
 Author: iCraze
 Depends: firmware (>= 12.0), mobilesubstrate (>= 0.9.5000)
-Filename: ./debs/cn.llld.settingsudid_1.0_iphoneos-arm64e.deb
-Size: 3648
+Filename: ./debs/cn.llld.settingsudid_1.0_iphoneos-arm64.deb
+Size: 3636
 Installed-Size: 140
-MD5sum: 5dd5efe3d6f258f8436311ce503faae8
-SHA1: f8757f9801c94b3d1b34a3c6bde335ed35e981a3
-SHA256: 9ae03701e07b2190846e87d558dee294e31e061c04968204acb3b560dc570e33
+MD5sum: 228cfa5571354be843388b628f2a6611
+SHA1: 7b4ea03a75eab1d2143eccc641b1f4e3759b3fb4
+SHA256: dce3cbcbc18ecc5a62d3445b7f430f69f3815e16d34cd5be10314334852e8e9e
 SileoDepiction: https://w1nddust.github.io/Repo/depictions/cn.llld.settingsudid.json
 Description: Check your UDID from the Settings > General > About phone page!从“设置”>"通用">“关于手机”页查看您的UDID！_________仅测试用,有问题卸载---roothide
 
