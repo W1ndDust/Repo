@@ -164,6 +164,13 @@ def build_catalog(data: dict, root: str) -> str:
                  body, root, "packages", data, "")
 
 
+def full_desc(p: dict) -> str:
+    """Description 的完整内容：首行（摘要）+ 续行，缺一不可。"""
+    parts = [p.get("summary", "").strip(), p.get("description", "").strip()]
+    text = "\n".join(x for x in parts if x)
+    return text or "未提供详细描述。"
+
+
 def build_detail(data: dict, p: dict, root: str) -> str:
     initial = esc(p["name"][0].upper())
     tag_class = {"RootHide": "rh", "System": "sys", "TrollStore": "ts"}.get(p["section"], "rl")
@@ -186,7 +193,7 @@ def build_detail(data: dict, p: dict, root: str) -> str:
         summary=esc(p["summary"]), version=esc(p["version"]),
         architecture=esc(p["architecture"]), size_label=esc(p["size_label"]),
         maintainer=maintainer,
-        description=(esc(p["description"]) or "未提供详细描述。").replace("\n", "<br>"),
+        description=esc(full_desc(p)).replace("\n", "<br>"),
         depends=depends, filename=esc(p["filename"]),
         file_name=esc(Path(p["filename"]).name),
         sha256=esc(p["sha256"]), sha_short=esc(p["sha256"][:24] + "…" if p["sha256"] else "未提供"),
