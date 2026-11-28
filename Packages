@@ -17,35 +17,35 @@ Description: 微信插件管理：外观自定义、拖动排序、显隐与重�
 Package: com.mlgm.airdropx
 Name: AirDropX
 Version: 1.0.2
-Architecture: iphoneos-arm64
+Architecture: iphoneos-arm64e
 Section: RootHide Packages
 Maintainer: mlgm
 Author: mlgm
 Depends: firmware (>= 16.2), mobilesubstrate
-Filename: ./debs/com.mlgm.airdropx_1.0.2_iphoneos-arm64.deb
-Size: 67848
+Filename: ./debs/com.mlgm.airdropx_1.0.2_iphoneos-arm64e.deb
+Size: 67852
 Installed-Size: 292
-MD5sum: 5dd53a17ed8f88d9e54d808f677cf30d
-SHA1: 9f9985805ba164b49d472d86c383306372c2d728
-SHA256: f02348648fae0d34e3f5fb1bf521b043541077f96b021b36f18602abb8d870c1
+MD5sum: a39de0cbc9adb799ff51c7ac75253061
+SHA1: 8dfc0b0a73f202b7c75c3fff0beaa730579484d5
+SHA256: 48fa7dd163841b763c1101a023b1ce1d72cb960e35ad57f1170c6c8aed38524c
 SileoDepiction: https://w1nddust.github.io/Repo/depictions/com.mlgm.airdropx.json
 Description: 为控制中心「隔空投送」新增「所有人（无限制）」模式，并向 Actra 提供四种接收模式动作。
 
 Package: com.iosdump.appdata
 Name: AppData软件增强-RootHide
 Version: 2.7.5
-Architecture: iphoneos-arm64
+Architecture: iphoneos-arm64e
 Section: RootHide Packages
 Maintainer: iosdump
 Author: iosdump
 Depends: firmware (>= 11.0), mobilesubstrate, preferenceloader
 Conflicts: com.netskao.appdatas, com.netskao.appdata, cn.zqbb.appdata, com.fouadraheb.appdata, com.iosdump.appdata
 Replaces: com.iosdump.appdata
-Filename: ./debs/com.iosdump.appdata_2.7.5_iphoneos-arm64.deb
+Filename: ./debs/com.iosdump.appdata_2.7.5_iphoneos-arm64e.deb
 Size: 1722920
-MD5sum: 752d59b5b893dd2a11d35850bf65378a
-SHA1: 444351c3772d805b5e3b1162c923d1d6a1d68d8c
-SHA256: db8fe3998b09806ce73e0b6007eaa1c548e84406e6ed98abc826f33c74ef1973
+MD5sum: 355a1149fe9240af5a74ce65c05fe1b7
+SHA1: 47581c6c0874d6994912d695fcf562e193a93347
+SHA256: 6342defd5ad239d360ec60af22d428d92085b4edbb45483e93aa7b14a3053daa
 SileoDepiction: https://w1nddust.github.io/Repo/depictions/com.iosdump.appdata.json
 Description: 降级应用
  - 修改应用名称
@@ -58,24 +58,24 @@ Description: 降级应用
 Package: com.82flex.noredirect
 Name: No Redirect
 Version: 2.1
-Architecture: iphoneos-arm64
+Architecture: iphoneos-arm64e
 Section: RootHide Packages
 Maintainer: Lessica <82flex@gmail.com>
 Author: Lessica <82flex@gmail.com>
 Depends: firmware (>= 14.0), mobilesubstrate, preferenceloader, com.opa334.altlist, com.opa334.libsandy
-Filename: ./debs/com.82flex.noredirect_2.1_iphoneos-arm64.deb
-Size: 91264
+Filename: ./debs/com.82flex.noredirect_2.1_iphoneos-arm64e.deb
+Size: 91262
 Installed-Size: 832
-MD5sum: 9201ce86b154848372d2086e12bdf1bc
-SHA1: fca7c6ca494bc51baafe3b04565766181318d2d7
-SHA256: ddfae2018af0851adae5bbed8d3efecc9fa58570d9213742b6f205061faa9ab8
+MD5sum: 687a2ea00b558525198dec29667ca63c
+SHA1: ca19e09912818532eb6952e523c845cd09839784
+SHA256: 08269c1072dc96463903b387657f6fd28c4700f236c04b51e3f6f88d6ae42af4
 SileoDepiction: https://w1nddust.github.io/Repo/depictions/com.82flex.noredirect.json
 Description: Stop specified apps from redirecting to App Store, Safari or other apps.
 
 Package: com.nicksworks.roadrunnerreborn
 Name: RoadRunner Reborn
 Version: 1.2.1
-Architecture: iphoneos-arm64
+Architecture: iphoneos-arm64e
 Section: RootHide Packages
 Maintainer: Nick's Works <hadobedo@gmail.com>
 Author: Nick's Works (Hadobedo)
@@ -83,46 +83,46 @@ Depends: firmware (>= 15.0), ellekit, preferenceloader, com.opa334.altlist
 Conflicts: com.nick.keepthepartygoing, se.nosskirneh.roadrunner, com.nicksworks.probrainrot
 Replaces: com.nick.keepthepartygoing, se.nosskirneh.roadrunner, com.nicksworks.probrainrot
 Homepage: https://github.com/hadobedo/RoadRunnerReborn
-Filename: ./debs/com.nicksworks.roadrunnerreborn_1.2.1_iphoneos-arm64.deb
-Size: 96154
+Filename: ./debs/com.nicksworks.roadrunnerreborn_1.2.1_iphoneos-arm64e.deb
+Size: 96152
 Installed-Size: 1244
-MD5sum: f2be0e6853a2929a37ac39707d03eb5e
-SHA1: ea4b5d67e2e7041e409ce2b4a395e2b7ba0704db
-SHA256: 1ed6539980b1343418bce1deb58ccece07f6bb0370efc6600db8e9e52cd6f5d4
+MD5sum: f1a5534d12e8dc318f859784fdbed6b0
+SHA1: 8da19670449041c19c6b524b2fec2acfb2c0131a
+SHA256: 5d6b493b32d2d95807618db82c394cfad05f2575ccb259ee4f51b271254e8cb6
 SileoDepiction: https://w1nddust.github.io/Repo/depictions/com.nicksworks.roadrunnerreborn.json
 Description: RoadRunner Reborn preserves Now Playing media and selected applications through SpringBoard resprings, with optional simultaneous multi-app audio playback. A userspace reboot is required after install, update, enable, disable, or removal; Safe Mode alone does not unload the daemon-side hook.
 
 Package: cn.llld.settingsudid
 Name: SettingsUDID-roothide
 Version: 1.0
-Architecture: iphoneos-arm64
+Architecture: iphoneos-arm64e
 Section: RootHide Packages
 Maintainer: 来了老弟
 Author: iCraze
 Depends: firmware (>= 12.0), mobilesubstrate (>= 0.9.5000)
-Filename: ./debs/cn.llld.settingsudid_1.0_iphoneos-arm64.deb
-Size: 3636
+Filename: ./debs/cn.llld.settingsudid_1.0_iphoneos-arm64e.deb
+Size: 3640
 Installed-Size: 140
-MD5sum: 228cfa5571354be843388b628f2a6611
-SHA1: 7b4ea03a75eab1d2143eccc641b1f4e3759b3fb4
-SHA256: dce3cbcbc18ecc5a62d3445b7f430f69f3815e16d34cd5be10314334852e8e9e
+MD5sum: b9eda7d789a10698cfe9ffd3eedcfd1a
+SHA1: 9946d986a69d81192ecebf13ae0238fc0a074646
+SHA256: 40e57a5a248d46ae3aebd4c8d48e8bac96475ae2c2e0ea161723aeb31fef56f9
 SileoDepiction: https://w1nddust.github.io/Repo/depictions/cn.llld.settingsudid.json
 Description: Check your UDID from the Settings > General > About phone page!从“设置”>"通用">“关于手机”页查看您的UDID！_________仅测试用,有问题卸载---roothide
 
 Package: com.mallin.tunnelsharevpn
 Name: TunnelShareVPN
 Version: 2.2.0-6
-Architecture: iphoneos-arm64
+Architecture: iphoneos-arm64e
 Section: RootHide Packages
 Maintainer: Mallin
 Author: Mallin
 Depends: firmware (>= 15.0), mobilesubstrate | substitute | libhooker | ellekit, com.opa334.ccsupport, preferenceloader
 Pre-Depends: rootless-compat (>= 0.9)
-Filename: ./debs/com.mallin.tunnelsharevpn_2.2.0-6_iphoneos-arm64.deb
-Size: 573474
-MD5sum: 75078db54439ae69232a0ecd1bb90248
-SHA1: 6d2a0b0bb6c73abb9fd94239c626d0f45a2573d1
-SHA256: 1758f7c2d7ec8bd745945d48fbe7bd6a73ce374d3731ba50796ae9fa9119238d
+Filename: ./debs/com.mallin.tunnelsharevpn_2.2.0-6_iphoneos-arm64e.deb
+Size: 573476
+MD5sum: d877e21af7b5345d4d39cbc19e9b1a70
+SHA1: f4cfd15239a5bbe9d604ec9be8b631d872e6224b
+SHA256: f101e8177a25f1b70b7d6cc5181593d294b9c8f31a81de2708c878c5c4f92b69
 SileoDepiction: https://w1nddust.github.io/Repo/depictions/com.mallin.tunnelsharevpn.json
 Description: 1. 自动获取永久授权
  3. 功能1：实现本手机的科学上网功能直接通过热点形式分享给其他设备；
@@ -135,51 +135,51 @@ Description: 1. 自动获取永久授权
 Package: iya.banana.vehiclemotioncues
 Name: Vehicle Motion Cues
 Version: 0.0.2
-Architecture: iphoneos-arm64
+Architecture: iphoneos-arm64e
 Section: RootHide Packages
 Maintainer: hades
 Author: hades
 Depends: firmware (>= 15.0), firmware (<< 18.0), mobilesubstrate, preferenceloader, com.opa334.ccsupport (>= 1.3.10)
-Filename: ./debs/iya.banana.vehiclemotioncues_0.0.2_iphoneos-arm64.deb
+Filename: ./debs/iya.banana.vehiclemotioncues_0.0.2_iphoneos-arm64e.deb
 Size: 32942
 Installed-Size: 616
-MD5sum: 8ae8111a530589e4a398c4fb9f3dc6d1
-SHA1: 86a5372e84f507b1f6b0900bfc8d2a1b05044a27
-SHA256: 6083829dfa85f71714401a0b31d90fb7328e4559f2706cd4dc61048073998220
+MD5sum: 47859e07eb75afae3ab2df73edcd26a1
+SHA1: b3a4c71eda36dbc9a490ee9092938a1b55f70660
+SHA256: e4bf2b6d34738af08597d582066308030f5f8eb52f5c8cddc0107ec2e8004ded
 SileoDepiction: https://w1nddust.github.io/Repo/depictions/iya.banana.vehiclemotioncues.json
 Description: Reverse-derived Vehicle Motion Cues for iOS 17.
 
 Package: com.wcplugins.tweak.roothide
 Name: WCPlugins（隐根）
 Version: 2.1
-Architecture: iphoneos-arm64
+Architecture: iphoneos-arm64e
 Section: RootHide Packages
 Maintainer: WCPlugins
 Author: WCPlugins
 Depends: firmware (>= 11.0)
-Filename: ./debs/com.wcplugins.tweak.roothide_2.1_iphoneos-arm64.deb
+Filename: ./debs/com.wcplugins.tweak.roothide_2.1_iphoneos-arm64e.deb
 Size: 113108
-MD5sum: feba08a8a48575456700ff158658fe20
-SHA1: 9bdf22d5c750439230ec7db8c0b26ffe31a55048
-SHA256: a8b52573f38f8da197e499d4a5c04c5b03113f65de8065ed8d2bc00d2c9a9673
+MD5sum: e4190d88657e256cc16f9b265dc1731c
+SHA1: 5eb161d4766b38209ee252e66e411aa3d19b8ab2
+SHA256: 53a4c31721b536cc3b2652305db2e4ac2ba60fa66f938499d689d89f5d4b69d6
 SileoDepiction: https://w1nddust.github.io/Repo/depictions/com.wcplugins.tweak.roothide.json
 Description: 微信插件管理：外观自定义、拖动排序、显隐与重命名。
 
 Package: com.huayuarc.insulation
 Name: insulation
 Version: 1.0.27
-Architecture: iphoneos-arm64
+Architecture: iphoneos-arm64e
 Section: RootHide Packages
 Maintainer: doimty
 Author: be-huge & doimty
 Depends: mobilesubstrate, preferenceloader, firmware (>= 15.0)
 Replaces: com.huayuarc.insulation
-Filename: ./debs/com.huayuarc.insulation_1.0.27_iphoneos-arm64.deb
+Filename: ./debs/com.huayuarc.insulation_1.0.27_iphoneos-arm64e.deb
 Size: 242384
 Installed-Size: 2624
-MD5sum: 94a46dd8b618cbd7c16e1f73ad4c603e
-SHA1: fb010eab8c8b986812ee99b97b1cd8fac300175f
-SHA256: 4754cf4413f9ab36c549b7dd9c56e66a80188c57e087f387c4c863db7a91e1d8
+MD5sum: 818255c1b672ccf9be843d3c88d05e2e
+SHA1: d7bbb1c2c13b9018ed8d0ac667c6d8b6a9f6e581
+SHA256: c208a1a52406f2678501201f0e3514391012fbcb1504b2f2aee776908bef1c3d
 SileoDepiction: https://w1nddust.github.io/Repo/depictions/com.huayuarc.insulation.json
 Description: 解除温控，一切从简即可。支持命令行切换模式：ins off（原生温控）/ ins low（低功耗）/ ins max（全性能）/ ins status（查看当前模式）。包含设备朝下自动锁屏、隐藏电池维修提示、SmartBatteryAPI 智能停充，以及 Hello 120Hz 3.3.3-3 完整移植（帧率覆盖 / 全局注入 / 应用排除 / 调试 HUD / 系统录屏 120 帧）。
  仅在本机 iPhone 14 Pro（iOS 16.1.2，隐根 roothide 黑名单环境）上测试过安装与使用；其他系统版本、机型与越狱环境请自行测试。
