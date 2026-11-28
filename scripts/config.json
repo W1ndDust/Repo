@@ -12,10 +12,13 @@
   "base_url": "https://w1nddust.github.io/Repo/",
   "icon": "CydiaIcon.png",
   "sections": [
-    "RootLess",
+    "RootLess Packages",
     "RootHide",
     "System",
     "TrollStore"
   ],
-  "default_section": "RootLess"
+  "default_section": "RootLess Packages",
+  "section_labels": {
+    "RootHide": "RootHide Packages"
+  }
 }

@@ -28,6 +28,14 @@ CFG = json.loads((ROOT / "scripts" / "config.json").read_text(encoding="utf-8"))
 SECTIONS = CFG.get("sections") or ["RootLess"]
 DEFAULT_SECTION = CFG.get("default_section") or SECTIONS[0]
 
+
+def sec_of(kind: str) -> str:
+    """按语义前缀取配置里的实际分组名（RootLess 可能被改名为 RootLess Packages）。"""
+    for name in SECTIONS:
+        if name.split(" ")[0] == kind:
+            return name
+    return DEFAULT_SECTION
+
 OVERRIDE_FILE = ROOT / "scripts" / "sections.json"
 OVERRIDE = {}
 if OVERRIDE_FILE.exists():
@@ -86,8 +94,8 @@ def classify(deb: Path, c: dict) -> str:
         want = OVERRIDE[pid]
         return want if want in SECTIONS else DEFAULT_SECTION
     # 架构即环境：声明 arm64e 的包归 RootHide（用户约定）
-    if c.get("Architecture") == "iphoneos-arm64e" and "RootHide" in SECTIONS:
-        return "RootHide"
+    if c.get("Architecture") == "iphoneos-arm64e":
+        return sec_of("RootHide")
 
     if c.get("Section") in SECTIONS:
         return c["Section"]
@@ -95,19 +103,19 @@ def classify(deb: Path, c: dict) -> str:
     # 1) 安装路径最可信
     layout = install_layout(deb)
     if layout == "trollstore":
-        return "TrollStore" if "TrollStore" in SECTIONS else DEFAULT_SECTION
+        return sec_of("TrollStore")
     if layout == "system":
-        return "System" if "System" in SECTIONS else DEFAULT_SECTION
+        return sec_of("System")
     if layout == "rootless":
-        return "RootLess" if "RootLess" in SECTIONS else DEFAULT_SECTION
+        return sec_of("RootLess")
     if layout == "rootful":
-        return "RootHide" if "RootHide" in SECTIONS else DEFAULT_SECTION
+        return sec_of("RootHide")
 
     # 2) 路径无法判断时，才退回关键词
     blob = " ".join([pid, deb.name, c.get("Name", ""), c.get("Depends", ""),
                      c.get("Description", "")]).lower()
     if "roothide" in blob or "root hide" in blob:
-        return "RootHide" if "RootHide" in SECTIONS else DEFAULT_SECTION
+        return sec_of("RootHide")
     return DEFAULT_SECTION
 
 
@@ -194,9 +202,7 @@ def main():
     bad_arch = [c.get("Package") for _, _, c in items
                 if c.get("Architecture") not in ("iphoneos-arm", "iphoneos-arm64")]
     if bad_arch:
-        print(f"ℹ️  {len(bad_arch)} 个包声明 iphoneos-arm64e：Sileo 会把它们列入"
-              "「<分组> Packages」（已知且已接受的客户端行为）")
-        print("   如需消除该分组，把架构声明改为 iphoneos-arm64 —— 会丢失 arm64e 语义")
+        print(f"ℹ️  {len(bad_arch)} 个包声明 iphoneos-arm64e → Sileo 归入「<分组> Packages」")
 
     pkg_text = "\n".join(stanzas)
     (ROOT / "Packages").write_text(pkg_text, encoding="utf-8")

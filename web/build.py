@@ -150,10 +150,11 @@ def build_home(data: dict, featured: list[dict], root: str) -> str:
 
 def build_catalog(data: dict, root: str) -> str:
     rows = "".join(row(p, root, i) for i, p in enumerate(data["packages"], 1))
+    labels = data["repo"].get("labels", {})
     chips = "".join(
         f'<button role="tab" type="button" data-section="{esc(sec)}" aria-selected="false"'
         f'{" disabled" if data["stats"]["by_section"].get(sec, 0) == 0 else ""}>'
-        f'{esc(sec)}<em>{data["stats"]["by_section"].get(sec, 0)}</em></button>'
+        f'{esc(labels.get(sec, sec))}<em>{data["stats"]["by_section"].get(sec, 0)}</em></button>'
         for sec in data["repo"]["sections"]
     )
     body = render("packages.html", root=root, package_count=data["stats"]["total"],
@@ -180,7 +181,7 @@ def build_detail(data: dict, p: dict, root: str) -> str:
         changelog = ('<section class="block"><h2 class="block__title">更新记录</h2>'
                      f'<div class="changelog">{changelog_html(md)}</div></section>')
     body = render(
-        "package.html", root=root, env=esc(p["env"]), tag_class=tag_class,
+        "package.html", root=root, env=esc(p.get("section_label", p["env"])), tag_class=tag_class,
         initial=initial, name=esc(p["name"]), package=esc(p["package"]),
         summary=esc(p["summary"]), version=esc(p["version"]),
         architecture=esc(p["architecture"]), size_label=esc(p["size_label"]),
@@ -229,8 +230,9 @@ def build_add(data: dict, root: str) -> str:
 
 
 def build_about(data: dict, root: str) -> str:
+    labels = data["repo"].get("labels", {})
     sec_rows = "".join(
-        f'<div><dt>{esc(sec)}</dt><dd>{esc({"RootLess": "无根越狱", "RootHide": "隐根环境", "System": "系统级组件", "TrollStore": "TrollStore 环境"}.get(sec, sec))}</dd></div>'
+        f'<div><dt>{esc(labels.get(sec, sec))}</dt><dd>{esc({"RootLess": "无根越狱", "RootHide": "隐根环境", "System": "系统级组件", "TrollStore": "TrollStore 环境"}.get(sec, sec))}</dd></div>'
         for sec in data["repo"]["sections"]
     )
     body = render("about.html", root=root, sec_rows=sec_rows, repo_url=esc(data["repo"]["url"]),

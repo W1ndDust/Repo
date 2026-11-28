@@ -22,7 +22,8 @@ CONFIG = ROOT / "scripts" / "config.json"
 OUT = ROOT / "data" / "packages.json"
 
 # 环境 → 展示名（分类规则见 scripts/gen_index.py classify()：按包内安装路径判定）
-ENV_LABEL = {"RootLess": "Rootless", "RootHide": "RootHide", "System": "System", "TrollStore": "TrollStore"}
+ENV_LABEL = {"RootLess": "Rootless", "RootLess Packages": "Rootless",
+             "RootHide": "RootHide", "System": "System", "TrollStore": "TrollStore"}
 
 
 def parse_deb822(text: str) -> list[dict]:
@@ -74,6 +75,7 @@ def load():
 def validate(stanzas: list[dict], sections: list[str]) -> None:
     """硬校验：任何一条不通过都退出，并给出可定位的错误。"""
     errors = []
+    arm64e: set[str] = set()
     seen = set()
     for s in stanzas:
         pid = s.get("Package", "")
@@ -102,9 +104,11 @@ def validate(stanzas: list[dict], sections: list[str]) -> None:
 
         arch = s.get("Architecture", "")
         if arch not in ("iphoneos-arm", "iphoneos-arm64"):
-            # 不硬失败：包仍可展示，但要指出客户端会把它归入「<分组> Packages」
-            print(f"⚠️  {pid}: 架构「{arch}」不被 Sileo 识别，"
-                  f"会出现在「<分组> Packages」分组", file=sys.stderr)
+            arm64e.add(pid)
+
+    if arm64e:
+        print(f"ℹ️  {len(arm64e)} 个包声明 iphoneos-arm64e：Sileo 会把它们归入"
+              f"「<分组> Packages」分组（已确认的预期行为）")
 
     if errors:
         print("❌ 数据校验失败：", file=sys.stderr)
@@ -116,6 +120,7 @@ def validate(stanzas: list[dict], sections: list[str]) -> None:
 def build() -> dict:
     cfg, release, stanzas = load()
     sections = cfg.get("sections") or ["RootLess"]
+    labels = cfg.get("section_labels") or {}
     validate(stanzas, sections)
 
     packages = []
@@ -133,6 +138,7 @@ def build() -> dict:
             "architecture": s.get("Architecture", ""),
             "section": sec,
             "env": ENV_LABEL.get(sec, sec),
+            "section_label": labels.get(sec, sec),
             "summary": summary,
             "description": body,
             "maintainer": s.get("Maintainer", ""),
@@ -153,6 +159,7 @@ def build() -> dict:
             "description": release.get("Description") or cfg.get("description", ""),
             "url": cfg.get("base_url", ""),
             "sections": sections,
+            "labels": labels,
         },
         "stats": {
             "total": len(packages),

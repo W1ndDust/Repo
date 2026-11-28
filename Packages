@@ -2,7 +2,7 @@ Package: com.wcplugins.tweak
 Name: WCPlugins
 Version: 2.1
 Architecture: iphoneos-arm64
-Section: RootLess
+Section: RootLess Packages
 Maintainer: WCPlugins
 Author: WCPlugins
 Depends: firmware (>= 11.0)
