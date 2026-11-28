@@ -85,6 +85,10 @@ def classify(deb: Path, c: dict) -> str:
     if pid in OVERRIDE:
         want = OVERRIDE[pid]
         return want if want in SECTIONS else DEFAULT_SECTION
+    # 架构即环境：声明 arm64e 的包归 RootHide（用户约定）
+    if c.get("Architecture") == "iphoneos-arm64e" and "RootHide" in SECTIONS:
+        return "RootHide"
+
     if c.get("Section") in SECTIONS:
         return c["Section"]
 
@@ -190,9 +194,9 @@ def main():
     bad_arch = [c.get("Package") for _, _, c in items
                 if c.get("Architecture") not in ("iphoneos-arm", "iphoneos-arm64")]
     if bad_arch:
-        print("⚠️  以下包的架构不是 iphoneos-arm/iphoneos-arm64，"
-              "Sileo 会把它们列入「<分组> Packages」：", ", ".join(bad_arch))
-        print("   运行 python3 scripts/normalize_debs.py 自动修正（仅当二进制含 arm64）")
+        print(f"ℹ️  {len(bad_arch)} 个包声明 iphoneos-arm64e：Sileo 会把它们列入"
+              "「<分组> Packages」（已知且已接受的客户端行为）")
+        print("   如需消除该分组，把架构声明改为 iphoneos-arm64 —— 会丢失 arm64e 语义")
 
     pkg_text = "\n".join(stanzas)
     (ROOT / "Packages").write_text(pkg_text, encoding="utf-8")
