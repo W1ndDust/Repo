@@ -165,6 +165,26 @@ SHA256: a8b52573f38f8da197e499d4a5c04c5b03113f65de8065ed8d2bc00d2c9a9673
 SileoDepiction: https://w1nddust.github.io/Repo/depictions/com.wcplugins.tweak.roothide.json
 Description: 微信插件管理：外观自定义、拖动排序、显隐与重命名。
 
+Package: com.huayuarc.insulation
+Name: insulation
+Version: 1.0.27
+Architecture: iphoneos-arm64
+Section: RootHide Packages
+Maintainer: doimty
+Author: be-huge & doimty
+Depends: mobilesubstrate, preferenceloader, firmware (>= 15.0)
+Replaces: com.huayuarc.insulation
+Filename: ./debs/com.huayuarc.insulation_1.0.27_iphoneos-arm64.deb
+Size: 242384
+Installed-Size: 2624
+MD5sum: 94a46dd8b618cbd7c16e1f73ad4c603e
+SHA1: fb010eab8c8b986812ee99b97b1cd8fac300175f
+SHA256: 4754cf4413f9ab36c549b7dd9c56e66a80188c57e087f387c4c863db7a91e1d8
+Description: 解除温控，一切从简即可。支持命令行切换模式：ins off（原生温控）/ ins low（低功耗）/ ins max（全性能）/ ins status（查看当前模式）。包含设备朝下自动锁屏、隐藏电池维修提示、SmartBatteryAPI 智能停充，以及 Hello 120Hz 3.3.3-3 完整移植（帧率覆盖 / 全局注入 / 应用排除 / 调试 HUD / 系统录屏 120 帧）。
+ 仅在本机 iPhone 14 Pro（iOS 16.1.2，隐根 roothide 黑名单环境）上测试过安装与使用；其他系统版本、机型与越狱环境请自行测试。
+ 安装或使用后出现问题（安全模式、应用闪退、设置无法进入等）请自行卸载，使用风险自负。
+ 仅供自用，不推荐安装。
+
 Package: ellekit
 Name: ElleKit
 Version: 1.2-3+deadlockfix1

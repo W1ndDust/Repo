@@ -1,0 +1,27 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "tabname": "详情",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "仅在本机 iPhone 14 Pro（iOS 16.1.2，隐根 roothide 黑名单环境）上测试过安装与使用；其他系统版本、机型与越狱环境请自行测试。\n\n安装或使用后出现问题（安全模式、应用闪退、设置无法进入等）请自行卸载，使用风险自负。\n仅供自用，不推荐安装。",
+          "useSpacing": true
+        }
+      ]
+    },
+    {
+      "tabname": "更新日志",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "暂无更新日志。",
+          "useSpacing": true
+        }
+      ]
+    }
+  ]
+}
